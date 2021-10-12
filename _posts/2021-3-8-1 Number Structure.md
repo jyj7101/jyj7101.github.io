@@ -19,7 +19,7 @@ katex: True
 
 **정의(Definition)**는 '이해함에 착오가 생기지 않도록 의미를 분명하게 설명한 문장' 입니다.
 
-예를 들어 $\pi$를 '그 뭐냐 초등학교때 3.14 곱하던거' 라고 하지 않고 '원의 둘레를 지름으로 나눈 값' 이라고 설명하는 것이 정의입니다. 그리고 그 '정의한다' 라는 것을 저는 정보의 탄생이라고 생각합니다. 아무것도 없는 세상에 정의를 내림으로써 무언가 생성되는 것이죠.
+예를 들어 $$\pi$$를 '그 뭐냐 초등학교때 3.14 곱하던거' 라고 하지 않고 '원의 둘레를 지름으로 나눈 값' 이라고 설명하는 것이 정의입니다. 그리고 그 '정의한다' 라는 것을 저는 정보의 탄생이라고 생각합니다. 아무것도 없는 세상에 정의를 내림으로써 무언가 생성되는 것이죠.
 
 정의를 내림으로써 무언가를 만들었다면, 사용할 일이 있어야겠죠. 
 
@@ -83,19 +83,19 @@ else
 
 고등학교때 이것에 관련된 일화가 있었는데, 여백이 부족해서 적지 않겠습니다.
 
-$\displaystyle \mathbb {N}$ : **N**atural number - 자연수의 집합
+$$\displaystyle \mathbb {N}$$ : **N**atural number - 자연수의 집합
 
-$\displaystyle \mathbb {Z}$ : integer (독어 **Z**ahlen) - 정수의 집합
+$$\displaystyle \mathbb {Z}$$ : integer (독어 **Z**ahlen) - 정수의 집합
 
-$\displaystyle \mathbb {Q}$ : rational number (독어 **Q**uotient) - 유리수의 집합
+$$\displaystyle \mathbb {Q}$$ : rational number (독어 **Q**uotient) - 유리수의 집합
 
-$\displaystyle \mathbb {R}$ : **R**eal number - 실수의 집합
+$$\displaystyle \mathbb {R}$$ : **R**eal number - 실수의 집합
 
-$\displaystyle \mathbb {C}$ : **C**omplex number - 복소수의 집합
+$$\displaystyle \mathbb {C}$$ : **C**omplex number - 복소수의 집합
 
 ...
 
-$\displaystyle \mathbb {H}$ : **H**amilton number(quaternion) - 사원수(쿼터니언)
+$$\displaystyle \mathbb {H}$$ : **H**amilton number(quaternion) - 사원수(쿼터니언)
 
 # 이항연산의 정의
 
@@ -105,9 +105,9 @@ $\displaystyle \mathbb {H}$ : **H**amilton number(quaternion) - 사원수(쿼터
 
 프로그래밍 함수정의에서 두 개의 인자와 하나의 반환값을 가진 연산이죠.
 
-$a+b+c$의 경우, 세 개의 항 사이에 연산이 이루어지는 것 같지만
+$$a+b+c$$의 경우, 세 개의 항 사이에 연산이 이루어지는 것 같지만
 
-$a+b$  이후 $(a+b)+c$를  진행하기 때문에 이항연산입니다.
+$$a+b$$  이후 $$(a+b)+c$$를  진행하기 때문에 이항연산입니다.
 
 ```csharp
 int add(in int a, in int b)
@@ -125,25 +125,25 @@ var v = add(add(a + b),c);
 
 ---
 
-$A$가 비어있지 않은 집합이고, $\cdot$  및 $+$ 가 $A$에 대한 이진연산이라 가정합니다.
+$$A$$가 비어있지 않은 집합이고, $$\cdot$$  및 $$+$$ 가 $$A$$에 대한 이진연산이라 가정합니다.
 
 또한 이항연산은 항상 집합상에서만 이루어진다는 전제 조건이 주어집니다.
 
-따라서 집합 $S$내의 원소 $a,b$를 추출하여 이항연산을 한다면, 그 결과가 $S$에 속합니다.
+따라서 집합 $$S$$내의 원소 $$a,b$$를 추출하여 이항연산을 한다면, 그 결과가 $$S$$에 속합니다.
 
-Closure :  $a \isin A, b \isin A \implies a \cdot b \isin A$ 인 경우,
+Closure :  $$a \isin A, b \isin A \implies a \cdot b \isin A$$ 인 경우,
 
-$A$에 대한 연산 $\cdot$에 대해 닫혀있습니다.
+$$A$$에 대한 연산 $$\cdot$$에 대해 닫혀있습니다.
 
-- **Commutative (교환)** :  $a \cdot b=b \cdot a$
-- **Associative (결합)** : $(a\cdot b)\cdot c=a\cdot (b\cdot c)$
-- **Distributive (분배)** : $a\cdot(b+c)=a\cdot b+a\cdot c \quad\quad (b+c)\cdot a =b\cdot a+c\cdot a$
-- **Identity (항등원)** : 요소 $e$ 는 $a \cdot e = a = e \cdot a$ 인 경우 $e$는 모든 원소 $a$에 대한 항등원입니다.
+- **Commutative (교환)** :  $$a \cdot b=b \cdot a$$
+- **Associative (결합)** : $$(a\cdot b)\cdot c=a\cdot (b\cdot c)$$
+- **Distributive (분배)** : $$a\cdot(b+c)=a\cdot b+a\cdot c \quad\quad (b+c)\cdot a =b\cdot a+c\cdot a$$
+- **Identity (항등원)** : 요소 $$e$$ 는 $$a \cdot e = a = e \cdot a$$ 인 경우 $$e$$는 모든 원소 $$a$$에 대한 항등원입니다.
     
-    만약 이진연산이 $+$(더하기)일 경우 $e = 0$이며, 이진연산이 $\cdot$ (곱,$×$)일 경우 $e=1$입니다.
+    만약 이진연산이 $$+$$(더하기)일 경우 $$e = 0$$이며, 이진연산이 $$\cdot$$ (곱,$$×$$)일 경우 $$e=1$$입니다.
     
-- **Inverse (역원)** : 요소 $a$에 대해 연산  $\cdot$ 을 취하였을때 항등원 $e$ 를 만드는 원소 $b$ 입니다.
-만약 이진연산이 $+$(더하기)일 경우 $b = -a$이며, 이진연산이 $\cdot$ (곱,$×$)일 경우 $b=a^{-1}$입니다.
+- **Inverse (역원)** : 요소 $$a$$에 대해 연산  $$\cdot$$ 을 취하였을때 항등원 $$e$$ 를 만드는 원소 $$b$$ 입니다.
+만약 이진연산이 $$+$$(더하기)일 경우 $$b = -a$$이며, 이진연산이 $$\cdot$$ (곱,$$×$$)일 경우 $$b=a^{-1}$$입니다.
 
 아마 아래 내용들을 읽다보면 이곳을 자주 볼겁니다.
 
@@ -187,7 +187,7 @@ $A$에 대한 연산 $\cdot$에 대해 닫혀있습니다.
 
 환과 체는 2개의 이항연산을 갖는다고 하였습니다.
 
-그리고 그 이항연산은 제목에서 추론가능하듯, 덧셈($+$)과 곱셈( $\cdot$ )입니다.
+그리고 그 이항연산은 제목에서 추론가능하듯, 덧셈($$+$$)과 곱셈( $$\cdot$$ )입니다.
 
 생각해보면 단순합니다. 
 
@@ -197,9 +197,9 @@ $A$에 대한 연산 $\cdot$에 대해 닫혀있습니다.
 
 눈치채셨나요?
 
-뺄셈은 역원(inverse)을 통해 덧셈으로( $6+(-2)=4=(-2)+6$ ),
+뺄셈은 역원(inverse)을 통해 덧셈으로( $$6+(-2)=4=(-2)+6$$ ),
 
-나눗셈은 역원(inverse)을 통해 곱셈으로( $6\cdot (2^{-1}) = 3 = (2^{-1})\cdot6$ ) 나타낼 수 있습니다.
+나눗셈은 역원(inverse)을 통해 곱셈으로( $$6\cdot (2^{-1}) = 3 = (2^{-1})\cdot6$$ ) 나타낼 수 있습니다.
 
 다만 곱셈의 역원이 존재하는 수 체계 안에서의 이야기겠죠.
 
@@ -221,32 +221,32 @@ $A$에 대한 연산 $\cdot$에 대해 닫혀있습니다.
 
 일단 체 공리(Field Axiom)부터 확인을 해볼까요?
 
-- 덧셈 연산($+$)에 대해
+- 덧셈 연산($$+$$)에 대해
     1. **닫혀 있음(closure)** - 군(Group) , 환(Ring)
     집합 내 원소의 연산결과가 다시 그 집합 내에 존재
-    2. **항등원(identity) 이 존재 ( $0$ )** - 군(Group), 환(Ring)
-    $a + 0 = a = 0 + a$
+    2. **항등원(identity) 이 존재 ( $$0$$ )** - 군(Group), 환(Ring)
+    $$a + 0 = a = 0 + a$$
     3. **역원(inverse)이 존재** - 군(Group), 환(Ring)
-    $a+(-a) = 0 = (-a) + a$
+    $$a+(-a) = 0 = (-a) + a$$
     4. **결합법칙(associativity)  성립** - 군(Group), 환(Ring)
-    $(a+b)+c = a+(b+c)$
+    $$(a+b)+c = a+(b+c)$$
     5. **교환법칙(commutativity) 성립** - 가환군(Communtative Group), 환(Ring)
-    $a+b=b+a$
+    $$a+b=b+a$$
     
-- 곱셈연산( $\cdot$ )에 대해
+- 곱셈연산( $$\cdot$$ )에 대해
     1. **닫혀 있음(closure)** - 군(Group), 환(Ring)
     집합 내 원소의 연산결과가 다시 그 집합 내에 존재
-    2. **항등원(identity) 이 존재 ( $1$ )** - 군(Group)
-    $a \cdot 1 = a = 1 \cdot a$
+    2. **항등원(identity) 이 존재 ( $$1$$ )** - 군(Group)
+    $$a \cdot 1 = a = 1 \cdot a$$
     3. **0 이외의 모든 원소에서 역원(inverse)이 존재** - 군(Group)
-    $a\cdot a^{-1} = 1 = a^{-1} \cdot  a$
+    $$a\cdot a^{-1} = 1 = a^{-1} \cdot  a$$
     4. **0 이외의 모든 원소에서 결합법칙(associativity)  성립** - 군(Group), 환(Ring)
-    $(a\cdot b)\cdot c = a\cdot (b\cdot c)$
+    $$(a\cdot b)\cdot c = a\cdot (b\cdot c)$$
     5. **0 이외의 모든 원소에서 교환법칙(commutativity) 성립** - 가환환(Communtative Ring)
-    $a\cdot b=b\cdot a$
-- 덧셈($+$) 및 곱셈( $\cdot$ )에 대해
+    $$a\cdot b=b\cdot a$$
+- 덧셈($$+$$) 및 곱셈( $$\cdot$$ )에 대해
     1. **덧셈에 대한 곱셈 연산의 분배법칙(distributivity) 성립** - 환(Ring)
-    $a \cdot (b+c) = a\cdot b+a\cdot c$
+    $$a \cdot (b+c) = a\cdot b+a\cdot c$$
 
 즉 군(Group)은 모든 이항연산조건의 베이스이며,
 
@@ -355,31 +355,31 @@ IExistInverse<Multiply>{}
 
 아까 field에서 범위가 정해지거나 셀 수 있다면 유한체 혹은 갈루아 체 라고 하였습니다.
 
-유한하다. 즉 수량이 제한된 유한체의 표기는 $GF(q)$ , $GF(p^n)$ ,$F_q$, $F_{p^{^n}}$이라고 표현합니다.
+유한하다. 즉 수량이 제한된 유한체의 표기는 $$GF(q)$$ , $$GF(p^n)$$ ,$$F_q$$, $$F_{p^{^n}}$$이라고 표현합니다.
 
 여기서 
 
-- $q$를 위수 (Order), 유한 체 내 원소의 갯수(0포함)
-- $p$를 표수(Characteristic)
+- $$q$$를 위수 (Order), 유한 체 내 원소의 갯수(0포함)
+- $$p$$를 표수(Characteristic)
 
 라고 읽습니다.
 
 유한체(Finite Field)는 체(Field)이며, 체(Field)는 곱셈의 역원이 존재해야 합니다.
 
-유한체에서는 만약 $p$가 소수이고 0 ~ $p-1$의 범위를 가진 정수집합일때 곱셈의 역원이 존재하기 때문에 $q$는 소수($p)$의 거듭제곱($p^n=q)$이여야 합니다.
+유한체에서는 만약 $$p$$가 소수이고 0 ~ $$p-1$$의 범위를 가진 정수집합일때 곱셈의 역원이 존재하기 때문에 $$q$$는 소수($$p)$$의 거듭제곱($$p^n=q)$$이여야 합니다.
 
 이때 곱셈의 역원(inverse)는 페르마의 소정리를 통해 구할 수 있습니다.
 
 참고로 페르마의 소정리(Fermat's Little Theorem)는 이렇습니다.
 
-- $a$가 정수이고, $p$가 소수일 때, $gcd(a,p)=1$ (gcd는 최소공약수) 이면 $a^{p-1}\equiv1(mod \space p)$ 이다.
-- 이를 변형한다면 $a \space\cdot\space a^{p-2} \equiv 1(mod\space p)$ 이 될 수 있고,
-- 이에 따라 역원은 $a^{-1} \equiv a^{p-2}(mod\space p)$ 이다.
+- $$a$$가 정수이고, $$p$$가 소수일 때, $$gcd(a,p)=1$$ (gcd는 최소공약수) 이면 $$a^{p-1}\equiv1(mod \space p)$$ 이다.
+- 이를 변형한다면 $$a \space\cdot\space a^{p-2} \equiv 1(mod\space p)$$ 이 될 수 있고,
+- 이에 따라 역원은 $$a^{-1} \equiv a^{p-2}(mod\space p)$$ 이다.
 
 따라서 
 
-- $GF(5),GF(16)$등은 유한체가 존재하지만($GF(5^1),GF(2^4)$)
-- $GF(6),GF(20)$같은 경우는 유한체가 존재하지 않습니다.
+- $$GF(5),GF(16)$$등은 유한체가 존재하지만($$GF(5^1),GF(2^4)$$)
+- $$GF(6),GF(20)$$같은 경우는 유한체가 존재하지 않습니다.
 
 그런 유한체는 보통 다른연산도 가능하지만, 모듈러 연산에 적용시켜 표현하는 경우가 많습니다.
 
@@ -387,31 +387,31 @@ IExistInverse<Multiply>{}
 
 ![1%20Number%20Structure%20a8dfc199006d4f8b88cb5c1038d9fc49/Untitled.png](/assets/1%20Number%20Structure%20a8dfc199006d4f8b88cb5c1038d9fc49/Untitled.png)
 
-$GF(2)$의 곱셈 연산
+$$GF(2)$$의 곱셈 연산
 
 ![1%20Number%20Structure%20a8dfc199006d4f8b88cb5c1038d9fc49/Untitled%201.png](/assets/1%20Number%20Structure%20a8dfc199006d4f8b88cb5c1038d9fc49/Untitled%201.png)
 
-$GF(2)$의 덧셈 연산
+$$GF(2)$$의 덧셈 연산
 
 ![1%20Number%20Structure%20a8dfc199006d4f8b88cb5c1038d9fc49/Untitled%202.png](/assets/1%20Number%20Structure%20a8dfc199006d4f8b88cb5c1038d9fc49/Untitled%202.png)
 
-$GF(3)$﻿의 곱셈 연산
+$$GF(3)$$﻿의 곱셈 연산
 
 ![1%20Number%20Structure%20a8dfc199006d4f8b88cb5c1038d9fc49/Untitled%203.png](/assets/1%20Number%20Structure%20a8dfc199006d4f8b88cb5c1038d9fc49/Untitled%203.png)
 
-$GF(3)$의 덧셈 연산
+$$GF(3)$$의 덧셈 연산
 
 유한체의 덧셈은 두 원소 내에서의 동일한 승수를 가지는 항에서의 계수의 합을 통해 이루어집니다.
 
-즉 덧셈 및 곱셈에 대해 마지막에 $p$ 로 모듈러연산(Modular Arithmetic) 을 적용한다고 보면 됩니다.
+즉 덧셈 및 곱셈에 대해 마지막에 $$p$$ 로 모듈러연산(Modular Arithmetic) 을 적용한다고 보면 됩니다.
 
-그렇다면 $GF(N)$는 N진수가 아닐까요?
+그렇다면 $$GF(N)$$는 N진수가 아닐까요?
 
 그리고 다시 위의 표를 봅시다.
 
-$GF(2)$의 덧셈은 **XOR**(배타적 논리합)과 같고
+$$GF(2)$$의 덧셈은 **XOR**(배타적 논리합)과 같고
 
-$GF(2)$의 곱셈은 **AND**(논리곱)연산과 같습니다.
+$$GF(2)$$의 곱셈은 **AND**(논리곱)연산과 같습니다.
 
 나눗셈은 1의 역원(inverse)는 1밖에 없기때문에 변화하지 않습니다.
 
@@ -423,13 +423,13 @@ XOR의 경우 패리티체크, 암호키, 예전 메모리가 부족하거나 �
 
 그렇습니다. 현대컴퓨터는 기계어라고 불리는 일정길이의 비트 문자열로 표현합니다.
 
-1바이트, 8비트의 정보는 $GF(2^8)$로 표현할 수 있지 않을까요?
+1바이트, 8비트의 정보는 $$GF(2^8)$$로 표현할 수 있지 않을까요?
 
-또한 이런경우($GF(p^n)$)를 $GF(p)$의 확대체(extension Field)라고 합니다.
+또한 이런경우($$GF(p^n)$$)를 $$GF(p)$$의 확대체(extension Field)라고 합니다.
 
-$GF(2^n)$는 덧셈은 XOR, 곱셈은 비트단위 Shift 와 비트단위 XOR 연산을 사용하기 때문에 컴퓨터에서 속도가 빠릅니다. 따라서 현대 컴퓨터의 기반이 된다고 전 생각합니다.
+$$GF(2^n)$$는 덧셈은 XOR, 곱셈은 비트단위 Shift 와 비트단위 XOR 연산을 사용하기 때문에 컴퓨터에서 속도가 빠릅니다. 따라서 현대 컴퓨터의 기반이 된다고 전 생각합니다.
 
-아, 또한 $GF(2^8)$의 경우 AES(Advanced Encryption Standard)에 사용됩니다. 
+아, 또한 $$GF(2^8)$$의 경우 AES(Advanced Encryption Standard)에 사용됩니다. 
 
 # 체로부터 게임은 어떻게 만들어지는가
 
