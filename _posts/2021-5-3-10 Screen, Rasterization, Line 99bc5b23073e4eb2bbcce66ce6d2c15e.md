@@ -1,6 +1,11 @@
-# 10. Screen, Rasterization, Line
+---
+layout: post
+title: (그래픽 프로그래밍2D) 9. Screen, Rasterization, Line
+katex: True
+categories: assignment
+---
 
-### 1. 스크린 좌표계와 데카르트 좌표계가 가지는 차이점을 비교해 정리하시오.
+### 1. 스크린 좌표계와 데카르트 좌표계가 가지는 차이점을 비교해 정리
 
 ---
 
@@ -12,7 +17,7 @@
 
 **스크린 좌표계**  
 
-양의 정수($\mathbb{W}$)
+양의 정수( $$ \mathbb{W} $$ )
 
 왼손좌표계
 
@@ -20,7 +25,7 @@
 
 **데카르트 좌표계**
 
-실수($\mathbb {R}$)
+실수( $$ \mathbb {R} $$ )
 
 오른손좌표계
 
@@ -62,9 +67,9 @@
 
 좌상단 채우기 규칙은 간단히 말해 수학적 점의 위치에서 좌측과 상단의 변에 대응되는지로만 검사를 진행합니다.  우하단 규칙은 반대로 하단과 우측의 변에 대응되는지에 대한 검사만 진행합니다.
 
-![10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled.png](10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled.png)
+![10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled.png](/assets/10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled.png)
 
-![10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled%201.png](10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled%201.png)
+![10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled%201.png](/assets/10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled%201.png)
 
 이는 연결된 두 삼각형의 경우, 자석의 N극과 S극처럼 
 
@@ -74,9 +79,9 @@
 
 이를 수학적 점과 픽셀의 관계에 대해 사용할때는 다음과 같습니다.
 
-![10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled%202.png](10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled%202.png)
+![10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled%202.png](/assets/10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled%202.png)
 
-수학적 점에서 1*1 사이즈의 Z 패턴 사각형$^*$ 을 그린 후  Top-Left filling convention을 적용하는 것입니다. 사이즈만 작을 뿐 동일하니까요.
+수학적 점에서 1*1 사이즈의 Z 패턴 사각형 $$ ^* $$  을 그린 후  Top-Left filling convention을 적용하는 것입니다. 사이즈만 작을 뿐 동일하니까요.
 
 * 아마 이것은 Top-Left filling convention 때문에 Z패턴을 사용하는 것 같습니다. 만약 Top-Right filling Convention이 절대적이였다면 저 위의 큰 네모와 같은 삼각형으로 구성된 사각형이겠죠?
 
@@ -84,9 +89,9 @@
 
 ---
 
-![10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled%203.png](10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled%203.png)
+![10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled%203.png](/assets/10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled%203.png)
 
-![10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled%204.png](10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled%204.png)
+![10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled%204.png](/assets/10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/Untitled%204.png)
 
 픽셀화 규칙(Rasterization Rules) 부터 확인하도록 합시다.
 
@@ -175,8 +180,6 @@ DirectX에서 텍스처링시 마법의 숫자 -0.5에 관한 이야기인데요
 (그러나 그 날은 부처님이 오셨다고 합니다.)
 
 *추가 코멘트 (2021.5.24) - 예전에 봤던 글입니다! 참고하기 좋은글이라 추가적으로 인용합니다
-
-[https://blog.daum.net/gamza-net/16](https://blog.daum.net/gamza-net/16)
 
 [https://blog.daum.net/gamza-net/16](https://blog.daum.net/gamza-net/16)
 
@@ -303,7 +306,7 @@ currentPos += translationMask * dir;
 
 (GIF입니다. 실시간 드로잉 쇼)
 
-![assignment_GIF_8.gif](assignment_GIF_8.gif)
+![assignment_GIF_8.gif](/assets/10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e/assignment_GIF_8.gif)
 
 ```cpp
 void SoftRenderer::Update2D(float InDeltaSeconds)

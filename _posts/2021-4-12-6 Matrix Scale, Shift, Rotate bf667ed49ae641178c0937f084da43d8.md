@@ -1,3 +1,10 @@
+---
+layout: post
+title: (그래픽 프로그래밍2D) 6. Matrix - Scale, Shift, Rotate
+katex: True
+categories: assignment
+---
+
 # 6. Matrix : Scale, Shift, Rotate
 
 ---
@@ -8,9 +15,9 @@
 
 데카르트 좌표계 (Cartesian coordinate system)를 기본으로,
 
-두 기저벡터($\vec{e_1},\vec{e_2}$) 에 대해 기본값은 다음과 같다고 가정합니다.
+두 기저벡터($$\vec{e_1},\vec{e_2}$$) 에 대해 기본값은 다음과 같다고 가정합니다.
 
-($\vec{e_1},\vec{e_2}$) 는 각각 ($\vec{right},$ $\vec{up}$)이라고 생각하면 될 것 같습니다.
+($$\vec{e_1},\vec{e_2}$$) 는 각각 ($$\vec{right},$$ $$\vec{up}$$)이라고 생각하면 될 것 같습니다.
 
 $$
 \vec e_1 = \begin{bmatrix}
@@ -26,7 +33,7 @@ $$
 
 ### 크기 행렬
 
-x축으로 $a_x$ 배 만큼, y축으로 $b_y$배 만큼 공간을 늘린다면,
+x축으로 $$a_x$$ 배 만큼, y축으로 $$b_y$$배 만큼 공간을 늘린다면,
 
 이는 해당축에 맞는 기저벡터에 스칼라배를 한것과 같다고 생각합니다.
 
@@ -68,7 +75,7 @@ b_yy
 $$
 
 사실 묶어놓고 본다면 아래와 동일합니다. 
-($\vec{e_1}$ 과 그 대괄호는 현재 이미지편집을 할 수 없어, 분류를 위해 표기하였습니다. 
+($$\vec{e_1}$$ 과 그 대괄호는 현재 이미지편집을 할 수 없어, 분류를 위해 표기하였습니다. 
  위 수식에 추가로 그려놓은 주석이라고 이해해주시면 감사하겠습니다.)
 
 $$
@@ -96,7 +103,7 @@ $$
 
 따라서 기본 행렬은 다음과 같습니다.
 
-x축의 크기인 $x_{scale}$과 y축의 크기인 $y_{scale}$로 표기하였습니다.
+x축의 크기인 $$x_{scale}$$과 y축의 크기인 $$y_{scale}$$로 표기하였습니다.
 
 $$
 \begin{bmatrix}
@@ -107,9 +114,9 @@ $$
 
 ### y축 밀기 행렬
 
-y축 밀기 행렬. 즉 $\vec{e_1}$의 y성분이 0이 아니라 특정 수 $a_y$가 된다면, 
+y축 밀기 행렬. 즉 $$\vec{e_1}$$의 y성분이 0이 아니라 특정 수 $$a_y$$가 된다면, 
 
-y축으로 $a_y$만큼 밀린 공간이 나타날 것 입니다.
+y축으로 $$a_y$$만큼 밀린 공간이 나타날 것 입니다.
 
 따라서 두 기저벡터는 다음과 같이 나타낼 수 있습니다
 
@@ -159,7 +166,7 @@ $$
 
 ### 시계 방향 90도 회전 행렬, 반시계 방향 90도 회전 행렬
 
-시계방향 90$^{\circ}$ 회전이라. 즉 두 기저벡터의 위치관계는 바뀌지 않으며, 방향이 바뀐다 볼 수 있습니다. 따라서 다음과 같은 두 기저벡터를 정의할 수 있겠습니다
+시계방향 90$$^{\circ}$$ 회전이라. 즉 두 기저벡터의 위치관계는 바뀌지 않으며, 방향이 바뀐다 볼 수 있습니다. 따라서 다음과 같은 두 기저벡터를 정의할 수 있겠습니다
 
 $$
 \vec e_1 = \begin{bmatrix}
@@ -194,7 +201,7 @@ $$
 
 로 볼 수 있습니다.
 
-그렇다면 반시계방향90$^{\circ}$는 어떨까요?
+그렇다면 반시계방향90$$^{\circ}$$는 어떨까요?
 
 두 기저벡터를 정의한다면 다음과 같습니다.
 
@@ -295,7 +302,7 @@ y\\
  \bold u
 $$
 
-즉 시계방향 90$^{\circ}$ 은 
+즉 시계방향 90$$^{\circ}$$ 은 
 
 $$
 \begin{bmatrix}
@@ -306,7 +313,7 @@ $$
 
 과 같고,
 
-반시계방향 90$^{\circ}$은
+반시계방향 90$$^{\circ}$$은
 
 $$
 \begin{bmatrix}
@@ -321,9 +328,9 @@ $$
 
 오호 대장님 나오셨군요?
 
-$\vec{e_1}(\vec{right}) = (cos(\theta),sin(\theta))$
+$$\vec{e_1}(\vec{right}) = (cos(\theta),sin(\theta))$$
 
-$\vec{e_2}(\vec{up}) = (-sin(\theta),cos(\theta))$ 이므로,
+$$\vec{e_2}(\vec{up}) = (-sin(\theta),cos(\theta))$$ 이므로,
 
 두 기저벡터를 표현한다면 다음과 같습니다.
 
@@ -360,7 +367,7 @@ $$
 
 계산해봅시다.
 
-$\theta = 90(degree)$으로 잡고, 
+$$\theta = 90(degree)$$으로 잡고, 
 
 $$
 
@@ -386,7 +393,7 @@ y
 \end{bmatrix} = \bold u
 $$
 
-뭐랑 비슷하지 않나요? 맞습니다. 반시계방향 90$^\circ$회전과 같습니다.
+뭐랑 비슷하지 않나요? 맞습니다. 반시계방향 90$$^\circ$$회전과 같습니다.
 
 따라서 임의의 각 쎄타에 대한 회전행렬은 
 
@@ -410,9 +417,9 @@ $$
 
 따라서 이는 합성함수로 볼 수 있으며, 합성함수며 실수체계안에 있다면 행렬을 사용해도 무관하겠죠.
 
-$sin(\alpha + \beta)$ 라는건, 단위원에서 $\alpha$만큼 회전한 다음, $\beta$만큼 추가로 회전한다고 볼 수 있습니다.
+$$sin(\alpha + \beta)$$ 라는건, 단위원에서 $$\alpha$$만큼 회전한 다음, $$\beta$$만큼 추가로 회전한다고 볼 수 있습니다.
 
-따라서 회전행렬을 두개 만든 다음, 일단 두 각($\alpha,\beta$)을 넣어봅시다.
+따라서 회전행렬을 두개 만든 다음, 일단 두 각($$\alpha,\beta$$)을 넣어봅시다.
 
 $$
 \bold{R_\alpha}\bold{R_\beta} = 
@@ -442,7 +449,7 @@ cos\alpha cos\beta
 \end{bmatrix} = \bold R_{\alpha + \beta}
 $$
 
-영역을 매번 $a_{11},a_{10}$ 이렇게 적긴 귀찮으니 간단하게 다음 문자에 매핑한다고 가정합시다.
+영역을 매번 $$a_{11},a_{10}$$ 이렇게 적긴 귀찮으니 간단하게 다음 문자에 매핑한다고 가정합시다.
 
 $$
 \begin{bmatrix}
@@ -453,26 +460,26 @@ $$
 
 여기서 재미있는게 있습니다.
 
-$\bold {R_{\alpha}}$의 c와 $\bold {R_\beta}$의 $c$ 를 보세요. 나온값이 무엇인가요? 
+$$\bold {R_{\alpha}}$$의 c와 $$\bold {R_\beta}$$의 $$c$$ 를 보세요. 나온값이 무엇인가요? 
 
-$sin(\alpha + \beta) = sin\alpha cos\beta + cos\alpha sin\beta$ 와 동일합니다.
+$$sin(\alpha + \beta) = sin\alpha cos\beta + cos\alpha sin\beta$$ 와 동일합니다.
 
-$\bold {R_{\alpha}}$의 c와 $\bold {R_\beta}$의 $a,d$를 보면, 체의 공리상 덧셈의 교환법칙 및 곱셈의 교환법칙에 의거해 
- $cos(\alpha + \beta) = cos\alpha cos\beta - sin\alpha sin\beta$ 와 동일함을 볼 수 있습니다.
+$$\bold {R_{\alpha}}$$의 c와 $$\bold {R_\beta}$$의 $$a,d$$를 보면, 체의 공리상 덧셈의 교환법칙 및 곱셈의 교환법칙에 의거해 
+ $$cos(\alpha + \beta) = cos\alpha cos\beta - sin\alpha sin\beta$$ 와 동일함을 볼 수 있습니다.
 
-$\bold {R_{\alpha}}$의 c와 $\bold {R_\beta}$의 $b$ 는 약간 생각해야합니다.
+$$\bold {R_{\alpha}}$$의 c와 $$\bold {R_\beta}$$의 $$b$$ 는 약간 생각해야합니다.
 
-$-sin\alpha$는 $sin$함수의 특징인 기대칭(odd symmetry)을 통해 $sin(-\alpha)$라고 볼 수 있습니다.
+$$-sin\alpha$$는 $$sin$$함수의 특징인 기대칭(odd symmetry)을 통해 $$sin(-\alpha)$$라고 볼 수 있습니다.
 
-또한 $-sin\beta$ 역시 $sin(-\beta)$로 볼 수 있죠. 따라서 정리하면 
+또한 $$-sin\beta$$ 역시 $$sin(-\beta)$$로 볼 수 있죠. 따라서 정리하면 
 
-$sin(-\alpha + -\beta) = sin(-\alpha)cos(-\beta) + cos(-\alpha) sin(-\beta)$이며, 
+$$sin(-\alpha + -\beta) = sin(-\alpha)cos(-\beta) + cos(-\alpha) sin(-\beta)$$이며, 
 
-다시 기대칭 성질 및 곱셈의 교환법칙을 통해 $-sin\alpha cos\beta + -sin\beta cos\alpha$ 로 나타낼 수 있고 
+다시 기대칭 성질 및 곱셈의 교환법칙을 통해 $$-sin\alpha cos\beta + -sin\beta cos\alpha$$ 로 나타낼 수 있고 
 
-이는 덧셈의 교환법칙을 통해 $-sin\beta cos\alpha +-sin\alpha cos\beta$ 로 나타낼 수 있습니다.
+이는 덧셈의 교환법칙을 통해 $$-sin\beta cos\alpha +-sin\alpha cos\beta$$ 로 나타낼 수 있습니다.
 
-즉 이 역시 위에 설명한 $c$케이스와 같음을 볼 수 있습니다.
+즉 이 역시 위에 설명한 $$c$$케이스와 같음을 볼 수 있습니다.
 
 정리해볼까요?
 
@@ -490,7 +497,7 @@ $$
 
 그러면 이제 배각공식을 알아봅시다.
 
-배각, 즉 2배를 해야하니 $sin(\alpha + \beta) = sin\alpha cos\beta + cos\alpha sin\beta$ 에서 $\alpha = \beta$ 인 경우입니다.
+배각, 즉 2배를 해야하니 $$sin(\alpha + \beta) = sin\alpha cos\beta + cos\alpha sin\beta$$ 에서 $$\alpha = \beta$$ 인 경우입니다.
 
 $$
 \bold{R_\alpha}\bold{R_\alpha} = 
@@ -522,11 +529,11 @@ $$
 
 앗... 너무 더럽군요 하지만 뽑아봅시다. 
 
-$c$위치와 $d$위치를 봅시다.
+$$c$$위치와 $$d$$위치를 봅시다.
 
-어짜피 $sin\alpha cos\alpha$ 는 곱셈의 교환법칙을 만족하는 체계 내에 있으므로, 
+어짜피 $$sin\alpha cos\alpha$$ 는 곱셈의 교환법칙을 만족하는 체계 내에 있으므로, 
 
-$cos\alpha sin\alpha$로 볼 수 있습니다.
+$$cos\alpha sin\alpha$$로 볼 수 있습니다.
 
 정리해볼까요?
 
@@ -633,9 +640,9 @@ $$
 
 우리가 원하는 것인 오브젝트의 회전이 정상적으로 일어나지 않게 됩니다.
 
-$\therefore$ 따라서 열기반(column major order)에서는 $\bold{TRS} v$ , 행기반(row major order)에서는 $v \bold{SRT}$  순으로 배치해야합니다.
+$$\therefore$$ 따라서 열기반(column major order)에서는 $$\bold{TRS} v$$ , 행기반(row major order)에서는 $$v \bold{SRT}$$  순으로 배치해야합니다.
 
-$\therefore$다른 기반(major order)을 사용하는 곳에서 사용을 할려면 단순히 전치하면 됩니다.
+$$\therefore$$다른 기반(major order)을 사용하는 곳에서 사용을 할려면 단순히 전치하면 됩니다.
 
 ---
 
@@ -660,23 +667,23 @@ ad-bc = 0 가 되면 두 기저벡터를 변으로 하는 마름모의 넓이가
 하지만 아주 간단한 예시를 들어보죠. 크기변환이 만약 x축이나 y축에 대하여 음수를 갖게 된다면 어떨까요?
 
 예시를 하나 가져봅시다. 
-크기변환이 1,1 → -1,1 인 $\bold S = 
+크기변환이 1,1 → -1,1 인 $$\bold S = 
 \begin{bmatrix}
 -1 & 0 \\
 0 & 1
-\end{bmatrix}$  행렬과,
+\end{bmatrix}$$  행렬과,
 
-회전변환의 각($\theta$) 이 45도인 $\bold R = 
+회전변환의 각($$\theta$$) 이 45도인 $$\bold R = 
 \begin{bmatrix}
 cos\theta & -sin\theta \\
 sin\theta & cos\theta 
-\end{bmatrix}$ 행렬 이
+\end{bmatrix}$$ 행렬 이
 
-$\vec{v} = 
+$$\vec{v} = 
 \begin{bmatrix}
 1\\
 0
-\end{bmatrix}$를 변환시키려 합니다.
+\end{bmatrix}$$를 변환시키려 합니다.
 
 이하의 케이스는 열기반(column major order) 행렬계산 기준입니다.
 
@@ -702,7 +709,7 @@ RS의 케이스를 생각해보죠. 1사분면과 4사분면의 사이, x축에 
 
 그리고 위에서 말했듯 회전은 이동의 영향을 받습니다.
 
-$\therefore$ 그렇기 때문에 RS, 이동을 포함한 TRS가 열기반 행렬(column major order) 에서 수행해야 할 옳은 순서 입니다.
+$$\therefore$$ 그렇기 때문에 RS, 이동을 포함한 TRS가 열기반 행렬(column major order) 에서 수행해야 할 옳은 순서 입니다.
 
 ---
 
@@ -712,17 +719,17 @@ $\therefore$ 그렇기 때문에 RS, 이동을 포함한 TRS가 열기반 행렬
 
 두 기저 벡터가 서로를 향해 모이는 것이 넓이가 감소되는 것이라면, 만약 진행방향을 그대로 둔 채 서로 교차하는게 음수가 되는게 아닐까요?
 
-예를 들어 봅시다. $\vec{e_1} = 
+예를 들어 봅시다. $$\vec{e_1} = 
 \begin{bmatrix}
  1 \\
  0
-\end{bmatrix}$  과  $\vec{e_2} = 
+\end{bmatrix}$$  과  $$\vec{e_2} = 
 \begin{bmatrix}
  0 \\
  1
-\end{bmatrix}$  인 행렬이 
+\end{bmatrix}$$  인 행렬이 
 
-$\vec{e_1}$은 90도 만큼 회전하고, $\vec{e_2}$는 -90도만큼 회전한다면
+$$\vec{e_1}$$은 90도 만큼 회전하고, $$\vec{e_2}$$는 -90도만큼 회전한다면
 
 $$
 \begin{bmatrix}
@@ -744,15 +751,15 @@ $$
 
 이때 ad - bc = 0 - 2 = -2 가 됩니다.
 
-$\vec{e_1} = 
+$$\vec{e_1} = 
 \begin{bmatrix}
  1 \\
  0
-\end{bmatrix}$  과  $\vec{e_2} = 
+\end{bmatrix}$$  과  $$\vec{e_2} = 
 \begin{bmatrix}
  0 \\
  1
-\end{bmatrix}$  가 서로 반대를 갖게 되니, 
+\end{bmatrix}$$  가 서로 반대를 갖게 되니, 
 
 각 기저벡터가 선형의존을 지나 기존과는 다른 기저벡터로써 선형독립하게 됩니다.
 
@@ -762,7 +769,7 @@ $\vec{e_1} =
 
 혹은 두 기저벡터가 서로가 서로에게 어떤 위치관계를 갖는지를 설명하는 값이라고 생각합니다.
 
-($\vec{e_2}$는 $\vec{e_1}$의 반시계방향에 위치한다 등)
+($$\vec{e_2}$$는 $$\vec{e_1}$$의 반시계방향에 위치한다 등)
 
 아마 외적을 배운다면 더 제대로 설명할 수 있지 않을까 생각합니다.
 

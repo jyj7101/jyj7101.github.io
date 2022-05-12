@@ -1,10 +1,12 @@
-# 12.Local Space, Texture Mapping, Bilinear Interpolation
-
-### 목차
-
+---
+layout: post
+title: (그래픽 프로그래밍2D) 11. Local Space, Texture Mapping, Bilinear Interpolation
+katex: True
+categories: assignment
 ---
 
----
+Local Space, Texture Mapping, Bilinear Interpolation
+
 
 ## 텍스쳐 매핑 (Texture Mapping)
 
@@ -20,7 +22,7 @@
 
 아니 픽셀도 이미 레스터라이즈 단계에서설명한 적 있습니다.
 
-> [저희는 모니터의 화면을 구성하는 화소, 즉 픽셀을 기준으로 다루겠습니다.](10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e.md)
+> [저희는 모니터의 화면을 구성하는 화소, 즉 픽셀을 기준으로 다루겠습니다.](/assets/10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e.md)
 > 
 
 벡터공간에서는 어느 방향을 가르키는 벡터가 존재하고,
@@ -31,7 +33,7 @@
 
 그리고 텍스쳐에게는 텍셀이라는 단위를 사용하는 좌표계가 존재합니다.
 
-그리고 이걸, 가로 세로의 범위가 1인 좌표, $UV$좌표라고 말합니다.
+그리고 이걸, 가로 세로의 범위가 1인 좌표,  $$ UV $$ 좌표라고 말합니다.
 
 ### 텍셀로부터 텍스쳐의 색상을 얻기위한 방법
 
@@ -96,7 +98,7 @@ public static float Remap(
 
 그건 불러오는 구조의 차원을 보아야합니다
 
-![Untitled%205.png](Untitled%205.png)
+![Untitled%205.png](/assets/global/Untitled%205.png)
 
 이를 이해하기 위해서는 밉맵의 구조에 대해 알아야하는데,
 
@@ -116,7 +118,7 @@ public static float Remap(
 
 일단 스티브가 어떻게 생겼는지 기억이 안나니 대충 배치해줍니다.
 
-![언제봐도 정겨운 유니티 샘플 씬](12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled.png)
+![언제봐도 정겨운 유니티 샘플 씬](/assets/12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled.png)
 
 언제봐도 정겨운 유니티 샘플 씬
 
@@ -190,7 +192,7 @@ public class TempGetVertexPos : MonoBehaviour
 
 그러면 이제 OnEnable시 로그가 찍힙니다
 
-![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%201.png](12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%201.png)
+![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%201.png](/assets/12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%201.png)
 
 로그를 긁어서 vs에 넣어줍니다. 
 
@@ -198,7 +200,7 @@ UV를 일단 머리값으로 다 복사해서 만 넣어준 다음,
 
 렌더링하게되면 다음과 같이나옵니다.
 
-![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%202.png](12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%202.png)
+![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%202.png](/assets/12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%202.png)
 
 이제 uv맵핑만 하면됩니다. 
 
@@ -206,9 +208,9 @@ UV를 일단 머리값으로 다 복사해서 만 넣어준 다음,
 
 자동화를 할만한 식이 안떠오르면.... 직접 손수 적어야죠.
 
-(그리고 이 노가다는 결국 잘못 적혔다고 합니다. [참조](12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054.md))
+(그리고 이 노가다는 결국 잘못 적혔다고 합니다. [참조](/assets/12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054.md))
 
-![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%203.png](12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%203.png)
+![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%203.png](/assets/12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%203.png)
 
 아이 죽겠다 ㅎㅎ
 
@@ -289,7 +291,7 @@ UV를 일단 머리값으로 다 복사해서 만 넣어준 다음,
 
 이 행렬을 미리 곱해둠으로써 하나의 변환으로 만들 수 있습니다.
 
-![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%204.png](12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%204.png)
+![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%204.png](/assets/12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%204.png)
 
 유니티에서는 주로 다음과 같이 표현됩니다.
 
@@ -299,7 +301,7 @@ UV를 일단 머리값으로 다 복사해서 만 넣어준 다음,
 
 언리얼과 안 친해서 로컬기준인지 월드기준인지는 잘 모르겠습니다.
 
-![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%205.png](12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%205.png)
+![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%205.png](/assets/12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%205.png)
 
 유니티 트랜스폼을 뜯어봅시다.
 
@@ -359,9 +361,9 @@ public Vector3 InverseTransformVector(float x, float y, float z) { return Invers
 
 ---
 
-과거에 $TRSv$를 설명하며 왜 그렇게 되는지 적었던 적 있습니다.
+과거에  $$ TRSv $$ 를 설명하며 왜 그렇게 되는지 적었던 적 있습니다.
 
-> [6주차 - 크기행렬과 회전행렬중 어떤것을 우선해야하는가](6%20Matrix%20Scale,%20Shift,%20Rotate%20bf667ed49ae641178c0937f084da43d8.md)
+> [6주차 - 크기행렬과 회전행렬중 어떤것을 우선해야하는가](/assets/6%20Matrix%20Scale,%20Shift,%20Rotate%20bf667ed49ae641178c0937f084da43d8.md)
 > 
 
 예를 들어
@@ -382,7 +384,7 @@ public Vector3 InverseTransformVector(float x, float y, float z) { return Invers
 
 예제프로그램을 돌려봤습니다
 
-![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/assignment_GIF_12_1.gif](12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/assignment_GIF_12_1.gif)
+![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/assignment_GIF_12_1.gif](/assets/12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/assignment_GIF_12_1.gif)
 
 행렬곱에따라 모든것이 바뀌는걸 볼 수 있습니다. 
 
@@ -409,27 +411,27 @@ public Vector3 InverseTransformVector(float x, float y, float z) { return Invers
 **크기행렬**
 
 > [따라서 기본 행렬은 다음과 같습니다.
-x축의 크기인 $x_{scale}$과 y축의 크기인 $y_{scale}$로 표기하였습니다.](6%20Matrix%20Scale,%20Shift,%20Rotate%20bf667ed49ae641178c0937f084da43d8.md)
-$\begin{bmatrix}
+x축의 크기인  $$ x_{scale} $$ 과 y축의 크기인  $$ y_{scale} $$ 로 표기하였습니다.](/assets/6%20Matrix%20Scale,%20Shift,%20Rotate%20bf667ed49ae641178c0937f084da43d8.md)
+ $$ \begin{bmatrix}
 x_{scale} & 0\\
 0 & y_{scale}
-\end{bmatrix}$
+\end{bmatrix} $$ 
 > 
 
 **회전행렬**
 
-> [따라서 임의의 각 쎄타에 대한 회전행렬은](6%20Matrix%20Scale,%20Shift,%20Rotate%20bf667ed49ae641178c0937f084da43d8.md)
-$\begin{bmatrix}
+> [따라서 임의의 각 쎄타에 대한 회전행렬은](/assets/6%20Matrix%20Scale,%20Shift,%20Rotate%20bf667ed49ae641178c0937f084da43d8.md)
+ $$ \begin{bmatrix}
 cos(\theta) & -sin(\theta) \\
 sin(\theta) & cos(\theta)
-\end{bmatrix}$
+\end{bmatrix} $$ 
 > 
 
 **이동행렬**
 
-> [다시 이걸 행렬로 바꾸게 된다면,](7%20Affine%20Space%20&%20Span%205366810a08f94ccf8b79be887e2d9225.md)
+> [다시 이걸 행렬로 바꾸게 된다면,](/assets/7%20Affine%20Space%20&%20Span%205366810a08f94ccf8b79be887e2d9225.md)
 
-$\bold A\vec v =\begin{bmatrix}
+ $$ \bold A\vec v =\begin{bmatrix}
 1 & 0 & e \\
 0 & 1 & f \\
 0 & 0 & 1
@@ -452,12 +454,12 @@ y+f\\
 1
 \end{bmatrix} =
 
- \bold u$
+ \bold u $$ 
 > 
 
 따라서 다시 정리한다면
 
-$$
+ $$ 
 S_{(scale)}=
 \begin{bmatrix} 
 s_x & 0 & 0 \\ 
@@ -479,25 +481,25 @@ T_{(translation)}=
 0 & 0 & 1 
 \end{bmatrix}\\
 
-$$
+ $$ 
 
 양식미를 위한 행렬곱을 첨가하고,
 
 **행렬의 곱셈**
 
-> [행렬의 곱셈](5%20Linearity,%20Matrix%20multiple,%20Polar%20Coordinate%2078227d285b464a5390577089f1b1e20d.md)
+> [행렬의 곱셈](/assets/5%20Linearity,%20Matrix%20multiple,%20Polar%20Coordinate%2078227d285b464a5390577089f1b1e20d.md)
 > 
 
 과제에서는 적지 않았지만 『행렬의 곱은 내적』이다 를 상기하며
 
 **벡터의 내적**
 
-> [벡터의 내적](9%20Vector%20Dot%20Product%20fc910f4dcff0497594d43bd6c675173d.md)
+> [벡터의 내적](/assets/9%20Vector%20Dot%20Product%20fc910f4dcff0497594d43bd6c675173d.md)
 > 
 
 마무리를 지어줍시다.
 
-$$
+ $$ 
 
 M=TRS=
 \begin{bmatrix} 
@@ -506,7 +508,7 @@ sin\theta\cdot s_x & cos\theta\cdot s_y & t_y \\
 0 & 0 & 1 
 
 \end{bmatrix}\\
-$$
+ $$ 
 
 마치 하나하나 쌓아온 무언가들이 폭발하는 것 같습니다. 
 
@@ -534,7 +536,7 @@ $$
 
 ---
 
-음... [위](12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054.md)에서 한번 봤었죠?
+음... [위](/assets/12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054.md)에서 한번 봤었죠?
 
 일단 특정 값에 대해 인접한 4 픽셀을 긁으면 된다는 것 까지는 인지하였습니다.
 
@@ -561,7 +563,7 @@ $$
 ![ - 실제 보면서 작업한 그림 - 
 좌표계만 통일된다면 개념은 동일하므로, 
 생각을 위한 좌표계는 
-데카르트 좌표계를 사용하였습니다.](12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%206.png)
+데카르트 좌표계를 사용하였습니다.](/assets/12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%206.png)
 
  - 실제 보면서 작업한 그림 - 
 좌표계만 통일된다면 개념은 동일하므로, 
@@ -635,17 +637,17 @@ FORCEINLINE static constexpr T Lerp(const T& InSrc, const T& InDest, float InAlp
 
 이제 텍스처를 준비해서 돌려봅시다.
 
-![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%207.png](12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%207.png)
+![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%207.png](/assets/12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%207.png)
 
 텍스쳐입니다.
 
 원본 소스
 
-![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%208.png](12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%208.png)
+![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%208.png](/assets/12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%208.png)
 
 최종본
 
-![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%209.png](12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%209.png)
+![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%209.png](/assets/12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%209.png)
 
 오 제대로 흐릿하게 보이기 시작합니다.
 

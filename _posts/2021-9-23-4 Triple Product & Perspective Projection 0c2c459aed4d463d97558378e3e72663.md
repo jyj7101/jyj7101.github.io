@@ -215,14 +215,14 @@ $$
 
 $$
 
-n_y=\frac{d\cdot v_y}{{-v}_z} \\
-n_x=\frac{d\cdot v_x}{{-v}_z}
+n_y=\frac{d\cdot v_y}{ {-v}_z} \\
+n_x=\frac{d\cdot v_x}{ {-v}_z}
 $$
 
 일반화하면 다음과 같죠.
 
 $$
-P_{ndc}=\left(\frac{d\cdot v_x}{{-v}_z},\frac{d\cdot v_y}{{-v}_z}\right)=-\frac{d}{v_z}(v_x,v_y)
+P_{ndc}=\left(\frac{d\cdot v_x}{ {-v}_z},\frac{d\cdot v_y}{ {-v}_z}\right)=-\frac{d}{v_z}(v_x,v_y)
 $$
 
 결론적으로 보자면 z값에 따라 x와 y값을 이동한다와 같습니다.
