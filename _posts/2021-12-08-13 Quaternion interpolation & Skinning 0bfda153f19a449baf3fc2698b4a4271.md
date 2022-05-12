@@ -1,8 +1,10 @@
-# 13. Quaternion interpolation & Skinning
-
 ---
-
+layout: post
+title: (그래픽 프로그래밍3D) 13. Quaternion interpolation & Skinning
+katex: True
+categories: assignment
 ---
+Quaternion interpolation & Skinning
 
 # 머릿말
 
@@ -46,7 +48,7 @@ Quaternion LERP(const Quaternion& a, const Quaternion& b, const float t)
 
 각으로 나누고, 크기가 동일하다면 구를 띄게되니 구면-이라는 단어가 붙는 것이죠.
 
-![Untitled](13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled.png)
+![Untitled](/assets/13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled.png)
 
 ## 사원수의 구면 선형 보간 방법
 
@@ -54,15 +56,15 @@ Quaternion LERP(const Quaternion& a, const Quaternion& b, const float t)
 
 그러면 일단 보간식부터 다시 들어가볼까요?
 
-회전에 대해 나타내야하므로, t와 1-t가 아닌 두 임의의 값 $\alpha$, $\beta$로  표현하면 다음과 같습니다.
+회전에 대해 나타내야하므로, t와 1-t가 아닌 두 임의의 값  $$ \alpha $$ ,  $$ \beta $$ 로  표현하면 다음과 같습니다.
 
-$$
+ $$ 
 q'=\alpha{q_1}+\beta{q_2}
-$$
+ $$ 
 
 그리고 이를 벡터로 시각화한다면, 
 
-![Untitled](13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%201.png)
+![Untitled](/assets/13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%201.png)
 
 다음과 같은 형태를 띄게 됩니다.
 
@@ -72,29 +74,29 @@ $$
 
 벡터 v는 간단하게 정의할 수 있습니다.
 
-$$
+ $$ 
 \vec{v} = \vec{x}cos(\theta \cdot ratio),\vec{y}sin(\theta \cdot ratio)
-$$
+ $$ 
 
 그러면 직교벡터를 구해야겠죠.
 
-![Untitled](13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%202.png)
+![Untitled](/assets/13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%202.png)
 
 직교벡터는 간단하게 벡터u에서 x로 이동한 만큼 빼주면 됩니다.
 
 정리하면 
 
-$$
+ $$ 
 \vec{v}=\vec{x}\cos(\theta \cdot ratio)+\frac{\vec{u}-\vec{x}\cos(\theta)}{\sin(\theta)}\sin(\theta \cdot ratio)\\=\vec{x}(\cos(\theta \cdot ratio)-\frac{\cos(\theta)\sin(\theta \cdot ratio)}{\sin(\theta)})+\vec{u}\frac{\sin(\theta \cdot ratio)}{\sin(\theta)}\\=\vec{x}(\frac{\sin(\theta)\cos(\theta \cdot ratio)-\cos(\theta)\sin(\theta \cdot ratio)}{\sin(\theta)})+\vec{u}\frac{\sin(\theta \cdot ratio)}{\sin(\theta)}\\=\vec{x}(\frac{\sin(\theta-\theta \cdot ratio)}{\sin(\theta)})+\vec{u}\frac{\sin(\theta \cdot ratio)}{\sin(\theta)}
 
-$$
+ $$ 
 
 그러므로,
 
-$$
+ $$ 
 \alpha=\frac{\sin((1-ratio)\theta)}{\sin\theta}\\
 \beta=\frac{\sin(ratio \cdot \theta)}{\sin\theta}
-$$
+ $$ 
 
 단, 여기서 분모가 0이 되면 안되기때문에 처리를 해줘야합니다.
 
@@ -311,7 +313,7 @@ public class QuaternionTester : MonoBehaviour
 }
 ```
 
-![GIF.gif](13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/GIF.gif)
+![GIF.gif](/assets/13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/GIF.gif)
 
 짜잔 입니다.
 
@@ -366,13 +368,13 @@ Quaternion Slerp(in Quaternion Quat1, in Quaternion Quat2, float Slerp)
 }
 ```
 
-![Untitled](13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%203.png)
+![Untitled](/assets/13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%203.png)
 
 보이시나요? 역방향회전일때 등각이 아닙니다.
 
 더 다이나믹 하게 바꿔보았습니다.
 
-![Untitled](13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%204.png)
+![Untitled](/assets/13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%204.png)
 
 이제 확실히 역회전은 등각이 아니라는 것을 볼 수 있습니다
 
@@ -403,11 +405,11 @@ if문 밖에서 수정하게되면, 음수에 의해 선형보간으로 넘어�
 
 따라서 내부각을 가져오는 아크코사인 함수에서 음수를 넘겨 반대 각을 가져오는겁니다.
 
-![Untitled](13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%205.png)
+![Untitled](/assets/13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%205.png)
 
 그러면 짜잔
 
-![Untitled](13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%206.png)
+![Untitled](/assets/13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%206.png)
 
 역방향에서도 등각이 잘 유지됩니다.
 
@@ -477,7 +479,7 @@ Quaternion Slerp(in Quaternion Quat1, in Quaternion Quat2,
 
 ---
 
-![안녕하세요, 리깅입니다. (Hello, Rig) (2트)](Untitled%206.png)
+![안녕하세요, 리깅입니다. (Hello, Rig) (2트)](/assets/global/Untitled%206.png)
 
 안녕하세요, 리깅입니다. (Hello, Rig) (2트)
 
@@ -581,11 +583,11 @@ Quaternion Slerp(in Quaternion Quat1, in Quaternion Quat2,
 
 ### 유니티의 스케일링된 부모 하위의 자식 회전
 
-![rotate.gif](13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/rotate.gif)
+![rotate.gif](/assets/13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/rotate.gif)
 
 ### 언리얼에서의 스케일링된 부모 하위 자식 회전
 
-![Honeycam 2021-12-06 23-29-28.gif](13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Honeycam_2021-12-06_23-29-28.gif)
+![Honeycam 2021-12-06 23-29-28.gif](/assets/13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Honeycam_2021-12-06_23-29-28.gif)
 
 ## 크기 변환과 회전 변환을 서로 분리하는 경우 LocalToWorld와 WorldToLocal을 구성하는 수식을 유도하고 이를 코드로 나타내시오.
 
@@ -593,13 +595,13 @@ Quaternion Slerp(in Quaternion Quat1, in Quaternion Quat2,
 
 ### LocalToWorld
 
-$$
+ $$ 
 M_{world}=M_{parent}\cdot M_{local}
-$$
+ $$ 
 
-$$
+ $$ 
 \vec{t'_{world}}=(q\cdot\vec{t'})*\vec{s}+\vec{t}
-$$
+ $$ 
 
 ```cpp
 FORCEINLINE constexpr Transform Transform::LocalToWorld(const Transform& InParentWorldTransform) const
@@ -615,13 +617,13 @@ FORCEINLINE constexpr Transform Transform::LocalToWorld(const Transform& InParen
 
 ### WorldToLocal
 
-$$
+ $$ 
 M_{local}=M^{-1}_{parent}\cdot M_{world}
-$$
+ $$ 
 
-$$
+ $$ 
 \vec{t^{-1}}=(q^*\cdot\vec{-t'})*\vec{s^{-1}}
-$$
+ $$ 
 
 ```cpp
 FORCEINLINE constexpr Transform Transform::WorldToLocal(const Transform& InParentWorldTransform) const
@@ -646,11 +648,11 @@ FORCEINLINE constexpr Transform Transform::WorldToLocal(const Transform& InParen
 
 어떤 캐릭터에 따라 다르겠지만, 이족보행을 하는 형상에 대해 Biped라고 말합니다.
 
-![Untitled](13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%207.png)
+![Untitled](/assets/13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%207.png)
 
 그리고 Max등에서 Biped의 계층구조를 일반적인 구조로 두며, 
 
-![Untitled](13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%208.png)
+![Untitled](/assets/13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%208.png)
 
 대략 위와 같은 구조를 따릅니다.
 
@@ -658,9 +660,9 @@ FORCEINLINE constexpr Transform Transform::WorldToLocal(const Transform& InParen
 
 만약 양갈래머리캐릭터다, 혹은 손가락도 무언가 들어간다 한다면 
 
-![Untitled](13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%209.png)
+![Untitled](/assets/13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%209.png)
 
-![Untitled](13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%2010.png)
+![Untitled](/assets/13%20Quaternion%20interpolation%20&%20Skinning%200bfda153f19a449baf3fc2698b4a4271/Untitled%2010.png)
 
 이런식으로도 본이 들어갈 수 있겠죠.
 

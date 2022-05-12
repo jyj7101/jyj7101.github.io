@@ -1,8 +1,10 @@
-# 9. Complex Number
-
 ---
-
+layout: post
+title: (그래픽 프로그래밍3D) 9. Complex Number
+katex: True
+categories: assignment
 ---
+Complex Number
 
 # 머리말
 
@@ -10,7 +12,7 @@
 
 ...저 죽을 것 같으니까 이번엔 좀 간단하게 가겠습니다...
 
-![결국 -업적 :응급실가서 천장사진 찍기- 깼습니다. ](9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/FCzdeBJVQAACdcJ.jpg)
+![결국 -업적 :응급실가서 천장사진 찍기- 깼습니다. ](/assets/9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/FCzdeBJVQAACdcJ.jpg)
 
 결국 -업적 :응급실가서 천장사진 찍기- 깼습니다. 
 
@@ -36,22 +38,22 @@
 
 ### 복소수의 구성요소
 
-![Untitled](9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled.png)
+![Untitled](/assets/9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled.png)
 
 ### 허수(imaginary number) 단위
 
-$$
+ $$ 
 
 i^2 = -1
-$$
+ $$ 
 
 ### 복소수의 덧셈
 
-![Untitled](9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%201.png)
+![Untitled](/assets/9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%201.png)
 
 ### 복소수의 곱셈
 
-![Untitled](9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%202.png)
+![Untitled](/assets/9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%202.png)
 
 ## 켤레복소수, 노름을 사용해 덧셈과 곱셈의 항등원 정리(?)
 
@@ -65,26 +67,26 @@ $$
 
 ### 덧셈의 항등원 (Additive Identity)
 
-$$
+ $$ 
 (a+bi)+(c+di)=(a+bi)\\
 \therefore c+di=0
-$$
+ $$ 
 
 ### 곱셈의 항등원(Multiplication Identity)
 
-$$
+ $$ 
 (a+bi)\cdot(c+di)=(a+bi)\\
 \therefore c+di=1+0\cdot i=1
-$$
+ $$ 
 
 항등원이 나왔으면 역원도 나와야겠죠.
 
 ### 덧셈의 역원(Additive Inverse)
 
-$$
+ $$ 
 (a+bi)+(c+di)=0\\
 \therefore c+di=-a-bi=-(a+bi)
-$$
+ $$ 
 
 ### 곱셈의 역원(Multiplication Inverse)
 
@@ -96,30 +98,30 @@ $$
 
 ### 켤레복소수 (Complex Conjugate)
 
-![Untitled](9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%203.png)
+![Untitled](/assets/9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%203.png)
 
 허수부의 크기만 반대로 한 값입니다.
 
 표기법은 두가지가 있는데, 
 
-$$
+ $$ 
 z^* : \text{물리학 선호} \\ 
 \bar{z} \text{ : vinculum,괄선, 순수수학 선호}
-$$
+ $$ 
 
 전 그냥 수학에서 쓰듯 쓰겠습니다.
 
-$$
+ $$ 
 z = a+bi \space ,  \bar{z}=a-bi\\
 z\cdot \bar{z}=a^2+b^2
-$$
+ $$ 
 
 ### 크기(노름, Norm)
 
-$$
+ $$ 
 
 |z|=\sqrt{a^2+b^2}
-$$
+ $$ 
 
 ### 곱셈의 역원(Multiplication Inverse, Reciprocal)
 
@@ -127,15 +129,15 @@ $$
 
 제곱하면 거나 여나 똑같다 라는걸 사용하는거죠.
 
-$$
+ $$ 
 \frac{1}{z} = \frac{\bar{z}}{z\cdot \bar{z}} = \frac{\bar{z}}{|z|^2} = \frac{a-bi}{a^2+b^2}
-$$
+ $$ 
 
 풀어보면, 중학교때 배우던 곱셈공식으로 묶어서 허수부 제곱을 실수화하며 부호를 돌려주면, 짠
 
-$$
+ $$ 
 \frac{a-bi}{a^2+b^2} \cdot a+bi = \frac{a^2-(bi)^2}{a^2+b^2} = \frac{a^2+b^2}{a^2+b^2} = 1
-$$
+ $$ 
 
 어때요 참 재미있죠?
 
@@ -149,12 +151,12 @@ $$
 
 성질역시 비슷하죠.(Im = imaginary(허수), Re = Real(실수))
 
-![Untitled](9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%204.png)
+![Untitled](/assets/9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%204.png)
 
-$$
+ $$ 
 z=(cos\theta, sin\theta),|z|=1 \\
 \because cos^2\theta+sin^2\theta=1
-$$
+ $$ 
 
 ### 단위복소수의 곱셈의 항등원
 
@@ -162,11 +164,11 @@ $$
 
 아까 구했던 곱셈의 역원식에 대입하여 곱해볼까요?
 
-$$
+ $$ 
 
 \frac{cos\theta-(sin\theta)i}{cos\theta^2+sin^2\theta} \cdot cos\theta+(sin\theta)i = \frac{cos\theta^2-((sin\theta)i)^2}{cos\theta^2+sin^2\theta} = \frac{cos\theta^2+sin^2\theta}{cos\theta^2+sin^2\theta} = 1
 
-$$
+ $$ 
 
 그러므로 단위복소수의 곱셈의 항등원 역시 1이 됩니다.
 
@@ -178,9 +180,9 @@ $$
 
 그렇게 분모가 소거(=1)되면 분자, 즉 켤레복소수만 남게 되죠.
 
-$$
+ $$ 
 \frac{1}{z} = \frac{\bar{z}}{|z|^2} = \frac{cos\theta-sin\theta i}{cos^2\theta+sin^2\theta } = cos\theta-sin\theta i
-$$
+ $$ 
 
 즉 단위복소수의 곱셈의 역원은 켤레복소수입니다.
 
@@ -196,15 +198,15 @@ $$
 
 하나의 평면을 이루는 '복소평면'으로 나타내는 것입니다.
 
-![Untitled](9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%205.png)
+![Untitled](/assets/9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%205.png)
 
 유클리드공간의 데카르트좌표계(Cartesian Coordinate System)을 생각해본다면 조금 더 쉽죠.
 
 이제 그렇다면 실수부를 x, 허수부를 y로 둬서 순서쌍으로 나타낼 수 있게 됩니다
 
-$$
+ $$ 
 a+bi = (a,b)
-$$
+ $$ 
 
 ## 복소 평면에서 단위 복소수들의 집합은 어떻게 표현되는지 정리하고, 삼각함수와 각을 사용해 단위 복소수를 표현하시오.
 
@@ -216,7 +218,7 @@ $$
 
 이건 결국 크기가 1인 값의 집합이므로 원이 되겠죠?
 
-![Untitled](9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%206.png)
+![Untitled](/assets/9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%206.png)
 
 그러므로
 
@@ -224,10 +226,10 @@ $$
 
 은 다음과 같이 정의할 수 있습니다
 
-$$
+ $$ 
 z = (cos\theta,sin\theta)\\
 z=cos\theta + sin\theta i
-$$
+ $$ 
 
 ## 어떤 복소수에 허수단위 i를 네 번 곱하면 원위치로 돌아옴을 정리
 
@@ -235,23 +237,23 @@ $$
 
 수식적으로,
 
-$$
+ $$ 
 i^2 = -1, (i^2)^2 = (-1)^2 = 1
-$$
+ $$ 
 
 입니다.
 
 이걸 복소평면으로 본다면
 
-$$
+ $$ 
 1 = 0\degree \space and \space i = 90\degree
-$$
+ $$ 
 
 그리고 복소수의 곱셈은 회전을 적용시킨다와 같으므로 
 
-$$
+ $$ 
 i^4 = i \cdot i \cdot i \cdot i  = 360\degree =0\degree
-$$
+ $$ 
 
 입니다.
 
@@ -261,16 +263,16 @@ $$
 
 어떤복소수 x + yi 가 있을 때, 이것과 단위복소수 cosA+sinBi를 이항연산한다고 가정합니다.
 
-$$
+ $$ 
 (x,y) \cdot (cos\theta,sin\theta)\\
 (xcos\theta-ysin\theta,
 xsin\theta+ycos\theta)
 
-$$
+ $$ 
 
 그리고 회전변환을 생각해 봅시다.
 
-$$
+ $$ 
 \begin{bmatrix} 
 cos\theta & -sin\theta \\
  sin\theta & cos\theta \end{bmatrix}
@@ -288,7 +290,7 @@ y
 xcos\theta  -ysin\theta \\
 xsin\theta  +ycos\theta 
 \end{bmatrix} 
-$$
+ $$ 
 
 굳!
 
@@ -296,11 +298,11 @@ $$
 
 삼각함수의 덧셈정리에 의해
 
-$$
+ $$ 
 (cos A+(sin A)i)(cos B + (sin B)i) = \\
 (cos A cos B - sin A sin B)+(sinAcosB+cosAsinB)i=\\
 cos(A+B) + (sin(A+B))i
-$$
+ $$ 
 
 라고 볼 수있겠네요. 회전변환과 동일하죠?
 
@@ -336,23 +338,23 @@ $$
 
 ---
 
-![Untitled](9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%203.png)
+![Untitled](/assets/9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%203.png)
 
-$$
+ $$ 
 let, z\cdot \bar{z} = (a,b)\cdot(a,-b).\\
 (a,b)\cdot(a,-b)=(a^2+b^2,-ab+ab)=(a^2+b^2, 0)\\
 
-$$
+ $$ 
 
 그림으로 정리하면 아래와 같습니다.
 
-![Untitled](9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%207.png)
+![Untitled](/assets/9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%207.png)
 
 # **오일러의 공식 #1**
 
 ---
 
-...이거결국 $e^{jθ} = cos θ + j\space sin θ$  하고싶어서 하는거죠..?
+...이거결국  $$ e^{jθ} = cos θ + j\space sin θ $$   하고싶어서 하는거죠..?
 
 ## 무리수 e (네이피어 수, 오일러 수)
 
@@ -364,13 +366,13 @@ $$
 
 표현방법으로는 두가지가 있는데, 급수를 통한 방법 및 극한을 통한 방법이 있습니다
 
-$$
+ $$ 
 e = \sum_{n=0}^{\infin} \frac{1}{n!} = 1+\frac{1}{1}+\frac{1}{1\cdot2}+\cdot\cdot\cdot
-$$
+ $$ 
 
-$$
+ $$ 
 e =\lim_{n\rightarrow \infin}{\left(1+\frac{1}{n}\right)^n}
-$$
+ $$ 
 
 ## 무리수 e를 도출하기 위한 극한의 개념을 정리하시오.
 
@@ -380,9 +382,9 @@ $$
 
 극한을 직관적으로 정의하자면 
 
-$$
+ $$ 
 \lim_{x\rightarrow a}{f(x)} = L
-$$
+ $$ 
 
 다음과 같은 식에 대해, x가 a에 한없이 가까워질 때, 함수값 f(x)가 어떤 극한값 L이 됨
 
@@ -398,15 +400,15 @@ $$
 
 곰
 
-![Untitled](9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%208.png)
+![Untitled](/assets/9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%208.png)
 
 그렇기때문에 어떤 값으로 나아가는 네이피어수(e)에게는 극한을 쓴다면 쉽게 이해할 수 있죠.
 
 그래서 기존의 급수를 극한으로 표현하자면, 다음과 같이 나타낼 수 있는 것입니다.
 
-$$
+ $$ 
 e =\lim_{n\rightarrow \infin}{\left(1+\frac{1}{n}\right)^n}
-$$
+ $$ 
 
 ## 지수 함수의 성질과 0승과 -승이 가지는 규칙을 정리하시오.
 
@@ -414,13 +416,13 @@ $$
 
 지수함수가 무엇인지 부터 봐야겠죠.
 
-$$
+ $$ 
 f(x) = a^x
-$$
+ $$ 
 
 변수를 지수로 두는 함수를 지수함수라 합니다.
 
-![Untitled](9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%209.png)
+![Untitled](/assets/9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%209.png)
 
 ### 0승의 규칙
 
@@ -428,9 +430,9 @@ $$
 
 지수가 0이면 0번 곱했다는 뜻이므로 곱셈의 항등원 1을 갖는 것이죠.
 
-$$
+ $$ 
 a^m\cdot a^0=a^{m+0}=a^m
-$$
+ $$ 
 
 ### -승의 규칙
 
@@ -438,28 +440,28 @@ $$
 
 어 음수번 곱하였다는건, 반대로 적용했다고 생각하니, 역행렬같은 느낌 아닐까요?
 
-그리고 역행렬 $A^{-1}$이 기억나시나요? 네 맞습니다. 
+그리고 역행렬  $$ A^{-1} $$ 이 기억나시나요? 네 맞습니다. 
 
-$x^{-1} = \frac{1}{x}$인 것입니다...!
+ $$ x^{-1} = \frac{1}{x} $$ 인 것입니다...!
 
-$$
+ $$ 
 if,m>0\\a^m\cdot a^{-m}=a^{m-m}=a^0=1\\
 a^{-m} = \frac{1}{a^{m}}
-$$
+ $$ 
 
-## 1보다 큰 밑을 가지는 자연지수함수 $f(x)=e^x$가 가지는 성질요약
+## 1보다 큰 밑을 가지는 자연지수함수  $$ f(x)=e^x $$ 가 가지는 성질요약
 
 ---
 
 일단은 일반적인 값을 먼저 설명을 하자면, 
 
-$$
+ $$ 
 f(0) = 1 \\
 f(1) = e\\
 \lim_{x\rightarrow -\infin}{f(x)} = 0\\
 \lim_{x\rightarrow \infin}{f(x)} = \infin\\
 
-$$
+ $$ 
 
 입니다.
 
@@ -467,7 +469,7 @@ $$
 
 지수함수의 도함수가 함수의 값(높이)과 똑같다는 부분인데요,
 
-![Untitled](9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%2010.png)
+![Untitled](/assets/9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%2010.png)
 
 임의의 점에서 접선을 긋고, 접선이 x축과 닿는 길이가 언제나 1이라는 소리입니다.
 
@@ -477,7 +479,7 @@ $$
 
 ---
 
-![Untitled](9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%2011.png)
+![Untitled](/assets/9%20Complex%20Number%20b20c5c9c63b04eea85f7c3a5e0fa6479/Untitled%2011.png)
 
 ### 접선
 
@@ -495,10 +497,10 @@ $$
 
 이걸 수학적으로 말해본다면, 기울기 m, 임의의 값 a에 대해
 
-$$
+ $$ 
 let, h = displacement(point_1,point_2)\\
 m = \lim_{h\rightarrow 0}\frac{f(a+h)-f(a)}{h} \\
-$$
+ $$ 
 
 라고 볼 수 있습니다.
 
