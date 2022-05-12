@@ -1,8 +1,8 @@
 ---
 layout: post
-title: (그래픽 프로그래밍2D)5. Linearity, Matrix - multiple
+title: 5. Linearity, Matrix - multiple
 katex: True
-categories: assignment
+categories: [그래픽 프로그래밍 2D,assignment]
 ---
 
 Polar Coordinate

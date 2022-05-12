@@ -4,7 +4,7 @@ email: ashuatz@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
   게임 프로그래밍 관련 글
 show_excerpts: true # set to true to show excerpts on the homepage
-
+category_list: [ assignment ]
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 sass:
@@ -14,7 +14,7 @@ plainwhite:
   tagline: Unity Game Developer
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
-  search: false # set to true to enable searchbar
+  search: true # set to true to enable searchbar
   dark_mode: true # set to true to add dark mode toggle
   portfolio_image: "assets/portfolio.png" # the path from the base directory of the site to the image to display (no / at the start)
   html_lang: "kr" # set the lang attribute of the <html> tag for the pages. See here for a list of codes: https://www.w3schools.com/tags/ref_country_codes.asp

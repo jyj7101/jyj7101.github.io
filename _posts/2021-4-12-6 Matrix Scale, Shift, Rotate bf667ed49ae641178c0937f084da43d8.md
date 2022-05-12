@@ -1,8 +1,8 @@
 ---
 layout: post
-title: (그래픽 프로그래밍2D) 6. Matrix - Scale, Shift, Rotate
+title: 6. Matrix - Scale, Shift, Rotate
 katex: True
-categories: assignment
+categories: [그래픽 프로그래밍 2D,assignment]
 ---
 
 # 6. Matrix : Scale, Shift, Rotate

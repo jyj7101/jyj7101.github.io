@@ -1,8 +1,8 @@
 ---
 layout: post
-title: (그래픽 프로그래밍3D) 10. Differentiation & Maclaurin's series
+title: 10. Differentiation & Maclaurin's series
 katex: True
-categories: assignment
+categories: [그래픽 프로그래밍 3D,assignment]
 ---
 
 Differentiation & Maclaurin's series

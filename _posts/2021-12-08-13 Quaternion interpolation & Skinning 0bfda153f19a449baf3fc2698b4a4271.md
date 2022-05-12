@@ -1,8 +1,8 @@
 ---
 layout: post
-title: (그래픽 프로그래밍3D) 13. Quaternion interpolation & Skinning
+title: 13. Quaternion interpolation & Skinning
 katex: True
-categories: assignment
+categories: [그래픽 프로그래밍 3D,assignment]
 ---
 Quaternion interpolation & Skinning
 

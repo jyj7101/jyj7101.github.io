@@ -1,8 +1,8 @@
 ---
 layout: post
-title: (그래픽 프로그래밍3D) 7. Frustum Cull And Bounding Volume
+title: 7. Frustum Cull And Bounding Volume
 katex: True
-categories: assignment
+categories: [그래픽 프로그래밍 3D,assignment]
 ---
 Frustum Cull And Bounding Volume
 

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: (그래픽 프로그래밍3D) 9. Complex Number
+title: 9. Complex Number
 katex: True
-categories: assignment
+categories: [그래픽 프로그래밍 3D,assignment]
 ---
 Complex Number
 

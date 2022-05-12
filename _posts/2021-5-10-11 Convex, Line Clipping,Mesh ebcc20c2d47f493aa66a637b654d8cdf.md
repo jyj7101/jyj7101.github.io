@@ -1,8 +1,8 @@
 ---
 layout: post
-title: (그래픽 프로그래밍2D) 10. Convex, Line Clipping,Mesh
+title: 10. Convex, Line Clipping,Mesh
 katex: True
-categories: assignment
+categories: [그래픽 프로그래밍 2D,assignment]
 ---
 
 Convex, Line Clipping,Mesh

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: (그래픽 프로그래밍2D)4. 삼각함수
+title: 4. 삼각함수
 katex: True
-categories: assignment
+categories: [그래픽 프로그래밍 2D,assignment]
 ---
 ## 삼각함수
 

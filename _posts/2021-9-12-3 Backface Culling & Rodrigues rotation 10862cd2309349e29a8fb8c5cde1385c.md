@@ -1,8 +1,8 @@
 ---
 layout: post
-title: (그래픽 프로그래밍3D) 3.Backface Culling & Rodrigues rotation
+title: 3.Backface Culling & Rodrigues rotation
 katex: True
-categories: assignment
+categories: [그래픽 프로그래밍 3D,assignment]
 ---
 Backface Culling & Rodrigues rotation
 
