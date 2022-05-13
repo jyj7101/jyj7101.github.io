@@ -196,5 +196,6 @@ kramdown:
   math_engine: katex
 
 plugins:
+  - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-katex
