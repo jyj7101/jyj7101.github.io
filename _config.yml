@@ -201,5 +201,6 @@ plugins:
   - jekyll-katex
 
 whitelist:
+  - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-katex
