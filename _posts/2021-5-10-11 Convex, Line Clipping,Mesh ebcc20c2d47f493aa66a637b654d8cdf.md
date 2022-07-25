@@ -49,7 +49,7 @@ Convex, Line Clipping,Mesh
 
 **아핀조합**
 
-> [(중략) 그래서 계산 결과값의 z성분이 1이 되도록 해야하죠.](/assets/7%20Affine%20Space%20&%20Span%205366810a08f94ccf8b79be887e2d9225.md)
+> [(중략) 그래서 계산 결과값의 z성분이 1이 되도록 해야하죠.](/posts/7-Affine-Space-&-Span-5366810a08f94ccf8b79be887e2d9225/)
 > 
 
 이걸 잘 기억하면서 선형조합을 생각해본다면,
@@ -227,7 +227,7 @@ P = a_1P_1 + a_2P_2 + ... +a_nP_x\\
 > 
 
 >  $$ [P'-P_3=s(P_1-P_3)+t(P_2-P_3)\\
-\vec{w} = s \cdot \vec{u} + t \cdot \vec{v}](/assets/11%20Convex,%20Line%20Clipping,Mesh%20ebcc20c2d47f493aa66a637b654d8cdf.md) $$ 
+\vec{w} = s \cdot \vec{u} + t \cdot \vec{v}](/posts/11-Convex,-Line-Clipping,Mesh-ebcc20c2d47f493aa66a637b654d8cdf/) $$ 
 > 
 
 여기서부터 다시 시작해봅시다.

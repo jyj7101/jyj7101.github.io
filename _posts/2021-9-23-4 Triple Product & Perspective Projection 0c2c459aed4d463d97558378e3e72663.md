@@ -150,7 +150,7 @@ det(A)= 0일 때,
 \vec{u}\times(\vec{v}\times\vec{w})=(\vec{u}\cdot\vec{w})\cdot\vec{v}-(\vec{u}\cdot\vec{v})\cdot\vec{w}
  $$ 
 
-또한 순서를 바꿔 [반수성질](/assets/2%20Gimbal-Lock%20&%20Cross%20Product%209b26bef15094460190a7b7a0639b3b5b.md)을 이용하여 다음과 같이 전개할 수 있습니다.
+또한 순서를 바꿔 [반수성질](/posts/2-Gimbal-Lock-&-Cross-Product-9b26bef15094460190a7b7a0639b3b5b/)을 이용하여 다음과 같이 전개할 수 있습니다.
 
  $$ 
 (\vec{u}\times\vec{v})\times\vec{w}\\=-\vec{w}\times(\vec{u}\times\vec{v})\\
@@ -175,7 +175,7 @@ det(A)= 0일 때,
 
 그러면 앞과 뒤, 거리 같은 정보를 하나로 모은 
 
-투영 평면(마치 [아핀공간](/assets/7%20Affine%20Space%20&%20Span%205366810a08f94ccf8b79be887e2d9225.md)이 생각나지 않나요?)이 필요합니다.
+투영 평면(마치 [아핀공간](/posts/7-Affine-Space-&-Span-5366810a08f94ccf8b79be887e2d9225)이 생각나지 않나요?)이 필요합니다.
 
 그러나 이 공간의 특수성은... z 값에 따라 xy평면이 영향을 받는다는게 중요합니다.
 

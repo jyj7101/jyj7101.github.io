@@ -687,7 +687,7 @@ $$
 
 앗! 정리되지 않은 미사용 소스가 일부 들어있을 수 있습니다 
 
-[https://gist.github.com/ashuatz/fde778e98f9dba9fac0e91fe54c1e03d](/assets/https://gist.github.com/ashuatz/fde778e98f9dba9fac0e91fe54c1e03d)
+[https://gist.github.com/ashuatz/fde778e98f9dba9fac0e91fe54c1e03d](https://gist.github.com/ashuatz/fde778e98f9dba9fac0e91fe54c1e03d)
 
 ---
 

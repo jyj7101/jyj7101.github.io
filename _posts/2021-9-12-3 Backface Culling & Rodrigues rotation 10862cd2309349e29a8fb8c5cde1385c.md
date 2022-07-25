@@ -15,7 +15,7 @@ Backface Culling & Rodrigues rotation
 
 ---
 
-[외적의 활용](/assets/2%20Gimbal-Lock%20&%20Cross%20Product%209b26bef15094460190a7b7a0639b3b5b.md)에서 이어짐
+[외적의 활용](/posts/2-Gimbal-Lock-&-Cross-Product-9b26bef15094460190a7b7a0639b3b5b/)에서 이어짐
 
 ## 백페이스 컬링(Backface Culling)
 
@@ -50,12 +50,12 @@ Backface Culling & Rodrigues rotation
 > 2차원의 삼각형
 > 
 > 
-> [정점에 대해서](/assets/11%20Convex,%20Line%20Clipping,Mesh%20ebcc20c2d47f493aa66a637b654d8cdf.md)
+> [정점에 대해서](/posts/11-Convex,-Line-Clipping,Mesh-ebcc20c2d47f493aa66a637b654d8cdf/)
 > 
 
 여기서 정점에는 여러 정보가 들어가는데,
 
-보통 위치, [UV(텍스처 매핑을 위한 좌표)](/assets/12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054.md), 탄젠트, 색상.. 등 여러정보가 들어가게 되는데, 그 중 노멀이라는게 들어가게 됩니다.
+보통 위치, [UV(텍스처 매핑을 위한 좌표)](/posts/12-Local-Space,-Texture-Mapping,-Bilinear-Interpol-c97b516b9cde4e0385aa15bd8647f054/), 탄젠트, 색상.. 등 여러정보가 들어가게 되는데, 그 중 노멀이라는게 들어가게 됩니다.
 
 ![파란선분 : 3DsMax에서의 정점 법선(Vertex  Normal)](/assets/3%20Backface%20Culling%20&%20Rodrigues%20rotation%2010862cd2309349e29a8fb8c5cde1385c/Untitled.png)
 
@@ -317,9 +317,9 @@ void SoftRenderer::DrawTriangle3D(std::vector<Vertex3D>& InVertices, const Linea
 
 점 빼기 점을 통해 구합니다.
 
-Do you know [Affine-space](/assets/7%20Affine%20Space%20&%20Span%205366810a08f94ccf8b79be887e2d9225.md)?
+Do you know [Affine-space](/posts/7-Affine-Space-&-Span-5366810a08f94ccf8b79be887e2d9225/)?
 
-### 벡터 **u를 벡터 n에 [투영](/assets/9%20Vector%20Dot%20Product%20fc910f4dcff0497594d43bd6c675173d.md)한 벡터 v을 구합니다**
+### 벡터 **u를 벡터 n에 [투영](/posts/9-Vector-Dot-Product-fc910f4dcff0497594d43bd6c675173d/)한 벡터 v을 구합니다**
 
 ---
 
@@ -327,7 +327,7 @@ Do you know [Affine-space](/assets/7%20Affine%20Space%20&%20Span%205366810a08f94
 \vec{v}=\frac{(\vec{u}\cdot \vec{n})\vec{n}}{\vec{n}\cdot\vec{n}}
  $$ 
 
-하지만  $$ \vert \vert n\vert \vert  $$  = 1,즉 [단위벡터](/assets/3%20Vector%209d89715b7d09454085c707e8f787afa0.md) 이므로,
+하지만  $$ \vert \vert n\vert \vert  $$  = 1,즉 [단위벡터](/posts/3-Vector-9d89715b7d09454085c707e8f787afa0/) 이므로,
 
  $$ 
 \vec{v}=(\vec{u}\cdot \hat{n})\hat{n}
@@ -402,7 +402,7 @@ OP'=\vec{v}+(\vec{u}-\vec{v})cos\theta + \vec{n}\times \vec{u}\cdot sin\theta \\
 
 그렇게 저희는 오일러각의 문제를 해결하기 위해 외적과 잡다한걸 하면서 여기까지 왔습니다.
 
-> [오일러각의 문제](/assets/2%20Gimbal-Lock%20&%20Cross%20Product%209b26bef15094460190a7b7a0639b3b5b.md)
+> [오일러각의 문제](/posts/2-Gimbal-Lock-&-Cross-Product-9b26bef15094460190a7b7a0639b3b5b/)
 > 
 > 
 > 이것이 일반적인 벡터단위의 선형보간을 했을때의 문제입니다.

@@ -198,7 +198,7 @@ PageUp/PageDown/Home/End: 세개의 원이 속한 평면공간의 이동
 
 ![assignment_GIF_4.gif](/assets/assignment_GIF_4.gif)
 
-[https://gist.github.com/ashuatz/ebbf2a422edbd9bc48795e2eddbbd735](/assets/https://gist.github.com/ashuatz/ebbf2a422edbd9bc48795e2eddbbd735)
+[https://gist.github.com/ashuatz/ebbf2a422edbd9bc48795e2eddbbd735](https://gist.github.com/ashuatz/ebbf2a422edbd9bc48795e2eddbbd735)
 
 ---
 

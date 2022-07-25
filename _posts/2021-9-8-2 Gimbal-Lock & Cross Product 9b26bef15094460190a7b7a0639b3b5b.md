@@ -173,7 +173,7 @@ u_x(v_zw_x-v_xw_z) - u_y(v_yw_z-v_zw_y))
 
 ...
 
-> [다시한번 잠깐 교환법칙을 보겠습니다](/assets/2%20Gimbal-Lock%20&%20Cross%20Product%209b26bef15094460190a7b7a0639b3b5b.md)
+> [다시한번 잠깐 교환법칙을 보겠습니다](/posts/2-Gimbal-Lock-&-Cross-Product-9b26bef15094460190a7b7a0639b3b5b/)
 > 
 > 
 >  $$ 
@@ -485,11 +485,11 @@ Rmx.
 
 ---
 
-예전에 행렬의 det은... 생각해보니 설명하지 않았지만 [두 기저 벡터로 만들어진 마름모의 넓이](/assets/6%20Matrix%20Scale,%20Shift,%20Rotate%20bf667ed49ae641178c0937f084da43d8.md) 비슷한 말을 한 적 있습니다.
+예전에 행렬의 det은... 생각해보니 설명하지 않았지만 [두 기저 벡터로 만들어진 마름모의 넓이](/posts/6-Matrix-Scale,-Shift,-Rotate-bf667ed49ae641178c0937f084da43d8/) 비슷한 말을 한 적 있습니다.
 
 그러면 3차원 행렬의 det은 무엇일까요? 세 기저벡터로 만들어진 부피가 아닐까요?
 
-> [3차원의 행렬식은 a(ei-fh)-b(di-fg)+c(dh-eg) 입니다.](/assets/1%203D%20Transform%206f2c493c074349c4bbda0c43e48b08ed.md)
+> [3차원의 행렬식은 a(ei-fh)-b(di-fg)+c(dh-eg) 입니다.](/posts/1-3D-Transform-6f2c493c074349c4bbda0c43e48b08ed/)
 > 
 
 그러면 여기서 2차원의 행렬식 ac-bd를 나눈한 값이 높이, 즉 외적의 크기가 되는게 아닐까요?

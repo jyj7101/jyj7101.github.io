@@ -22,7 +22,7 @@ Local Space, Texture Mapping, Bilinear Interpolation
 
 아니 픽셀도 이미 레스터라이즈 단계에서설명한 적 있습니다.
 
-> [저희는 모니터의 화면을 구성하는 화소, 즉 픽셀을 기준으로 다루겠습니다.](/assets/10%20Screen,%20Rasterization,%20Line%2099bc5b23073e4eb2bbcce66ce6d2c15e.md)
+> [저희는 모니터의 화면을 구성하는 화소, 즉 픽셀을 기준으로 다루겠습니다.](/posts/10-Screen,-Rasterization,-Line-99bc5b23073e4eb2bbcce66ce6d2c15e/)
 > 
 
 벡터공간에서는 어느 방향을 가르키는 벡터가 존재하고,
@@ -208,7 +208,7 @@ UV를 일단 머리값으로 다 복사해서 만 넣어준 다음,
 
 자동화를 할만한 식이 안떠오르면.... 직접 손수 적어야죠.
 
-(그리고 이 노가다는 결국 잘못 적혔다고 합니다. [참조](/assets/12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054.md))
+(그리고 이 노가다는 결국 잘못 적혔다고 합니다. [참조](/posts/12-Local-Space,-Texture-Mapping,-Bilinear-Interpol-c97b516b9cde4e0385aa15bd8647f054/))
 
 ![12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%203.png](/assets/12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054/Untitled%203.png)
 
@@ -363,7 +363,7 @@ public Vector3 InverseTransformVector(float x, float y, float z) { return Invers
 
 과거에  $$ TRSv $$ 를 설명하며 왜 그렇게 되는지 적었던 적 있습니다.
 
-> [6주차 - 크기행렬과 회전행렬중 어떤것을 우선해야하는가](/assets/6%20Matrix%20Scale,%20Shift,%20Rotate%20bf667ed49ae641178c0937f084da43d8.md)
+> [6주차 - 크기행렬과 회전행렬중 어떤것을 우선해야하는가](/posts/6-Matrix-Scale,-Shift,-Rotate-bf667ed49ae641178c0937f084da43d8/)
 > 
 
 예를 들어
@@ -411,7 +411,7 @@ public Vector3 InverseTransformVector(float x, float y, float z) { return Invers
 **크기행렬**
 
 > [따라서 기본 행렬은 다음과 같습니다.
-x축의 크기인  $$ x_{scale} $$ 과 y축의 크기인  $$ y_{scale} $$ 로 표기하였습니다.](/assets/6%20Matrix%20Scale,%20Shift,%20Rotate%20bf667ed49ae641178c0937f084da43d8.md)
+x축의 크기인  $$ x_{scale} $$ 과 y축의 크기인  $$ y_{scale} $$ 로 표기하였습니다.](/posts/6-Matrix-Scale,-Shift,-Rotate-bf667ed49ae641178c0937f084da43d8/)
  $$ \begin{bmatrix}
 x_{scale} & 0\\
 0 & y_{scale}
@@ -420,7 +420,7 @@ x_{scale} & 0\\
 
 **회전행렬**
 
-> [따라서 임의의 각 쎄타에 대한 회전행렬은](/assets/6%20Matrix%20Scale,%20Shift,%20Rotate%20bf667ed49ae641178c0937f084da43d8.md)
+> [따라서 임의의 각 쎄타에 대한 회전행렬은](/posts/6-Matrix-Scale,-Shift,-Rotate-bf667ed49ae641178c0937f084da43d8/)
  $$ \begin{bmatrix}
 cos(\theta) & -sin(\theta) \\
 sin(\theta) & cos(\theta)
@@ -429,7 +429,7 @@ sin(\theta) & cos(\theta)
 
 **이동행렬**
 
-> [다시 이걸 행렬로 바꾸게 된다면,](/assets/7%20Affine%20Space%20&%20Span%205366810a08f94ccf8b79be887e2d9225.md)
+> [다시 이걸 행렬로 바꾸게 된다면,](/posts/7-Affine-Space-&-Span-5366810a08f94ccf8b79be887e2d9225/)
 
  $$ \bold A\vec v =\begin{bmatrix}
 1 & 0 & e \\
@@ -487,14 +487,14 @@ T_{(translation)}=
 
 **행렬의 곱셈**
 
-> [행렬의 곱셈](/assets/5%20Linearity,%20Matrix%20multiple,%20Polar%20Coordinate%2078227d285b464a5390577089f1b1e20d.md)
+> [행렬의 곱셈](/posts/5-Linearity,-Matrix-multiple,-Polar-Coordinate-78227d285b464a5390577089f1b1e20d/)
 > 
 
 과제에서는 적지 않았지만 『행렬의 곱은 내적』이다 를 상기하며
 
 **벡터의 내적**
 
-> [벡터의 내적](/assets/9%20Vector%20Dot%20Product%20fc910f4dcff0497594d43bd6c675173d.md)
+> [벡터의 내적](/posts/9-Vector-Dot-Product-fc910f4dcff0497594d43bd6c675173d/)
 > 
 
 마무리를 지어줍시다.
@@ -536,7 +536,7 @@ sin\theta\cdot s_x & cos\theta\cdot s_y & t_y \\
 
 ---
 
-음... [위](/assets/12%20Local%20Space,%20Texture%20Mapping,%20Bilinear%20Interpol%20c97b516b9cde4e0385aa15bd8647f054.md)에서 한번 봤었죠?
+음... [위](/posts/12-Local-Space,-Texture-Mapping,-Bilinear-Interpol-c97b516b9cde4e0385aa15bd8647f054/)에서 한번 봤었죠?
 
 일단 특정 값에 대해 인접한 4 픽셀을 긁으면 된다는 것 까지는 인지하였습니다.
 
