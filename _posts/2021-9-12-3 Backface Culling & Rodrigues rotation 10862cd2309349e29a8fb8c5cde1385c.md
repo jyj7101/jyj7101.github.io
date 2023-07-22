@@ -311,7 +311,7 @@ void SoftRenderer::DrawTriangle3D(std::vector<Vertex3D>& InVertices, const Linea
 
 저 축만 구하면 됩니다. 축은 어떻게 만들까요? 저 평면의 수직이니 외적을 하겠죠.
 
-### 점 P**로 향하는 벡터 u를 구합니다**
+### 점 P로 향하는 벡터 u를 구합니다
 
 ---
 
@@ -319,7 +319,7 @@ void SoftRenderer::DrawTriangle3D(std::vector<Vertex3D>& InVertices, const Linea
 
 Do you know [Affine-space](/posts/7-Affine-Space-&-Span-5366810a08f94ccf8b79be887e2d9225/)?
 
-### 벡터 **u를 벡터 n에 [투영](/posts/9-Vector-Dot-Product-fc910f4dcff0497594d43bd6c675173d/)한 벡터 v을 구합니다**
+### 벡터 u를 벡터 n에 [투영](/posts/9-Vector-Dot-Product-fc910f4dcff0497594d43bd6c675173d/)한 벡터 v을 구합니다
 
 ---
 
