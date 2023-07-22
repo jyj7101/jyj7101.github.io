@@ -319,9 +319,11 @@ void SoftRenderer::DrawTriangle3D(std::vector<Vertex3D>& InVertices, const Linea
 
 Do you know [Affine-space](/posts/7-Affine-Space-&-Span-5366810a08f94ccf8b79be887e2d9225/)?
 
-### 벡터 u를 벡터 n에 [투영](/posts/9-Vector-Dot-Product-fc910f4dcff0497594d43bd6c675173d/)한 벡터 v을 구합니다
+### 벡터 u를 벡터 n에 투영한 벡터 v을 구합니다
 
 ---
+
+[투영 ? ](/posts/9-Vector-Dot-Product-fc910f4dcff0497594d43bd6c675173d/)
 
  $$ 
 \vec{v}=\frac{(\vec{u}\cdot \vec{n})\vec{n}}{\vec{n}\cdot\vec{n}}
