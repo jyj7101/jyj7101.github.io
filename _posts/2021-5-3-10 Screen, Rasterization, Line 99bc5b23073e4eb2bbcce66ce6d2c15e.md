@@ -2,7 +2,7 @@
 layout: post
 title: 9. Screen, Rasterization, Line
 katex: True
-categories: [그래픽 프로그래밍 2D,assignment]
+categories: [CK,그래픽 프로그래밍 2D,assignment]
 ---
 
 ### 1. 스크린 좌표계와 데카르트 좌표계가 가지는 차이점을 비교해 정리

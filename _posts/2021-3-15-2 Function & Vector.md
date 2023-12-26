@@ -2,7 +2,7 @@
 layout: post
 title: 2. Function & Vector
 katex: True
-categories: [그래픽 프로그래밍 2D,assignment]
+categories: [CK,그래픽 프로그래밍 2D,assignment]
 ---
 
 함수! 수학보단 프로그래밍에 익숙한 그 단어가 나왔습니다.

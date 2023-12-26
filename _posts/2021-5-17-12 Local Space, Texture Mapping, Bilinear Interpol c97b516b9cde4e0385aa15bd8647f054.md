@@ -2,7 +2,7 @@
 layout: post
 title: 11. Local Space, Texture Mapping, Bilinear Interpolation
 katex: True
-categories: [그래픽 프로그래밍 2D,assignment]
+categories: [CK,그래픽 프로그래밍 2D,assignment]
 ---
 
 Local Space, Texture Mapping, Bilinear Interpolation

@@ -2,7 +2,7 @@
 layout: post
 title: 10. Differentiation & Maclaurin's series
 katex: True
-categories: [그래픽 프로그래밍 3D,assignment]
+categories: [CK,그래픽 프로그래밍 3D,assignment]
 ---
 
 Differentiation & Maclaurin's series

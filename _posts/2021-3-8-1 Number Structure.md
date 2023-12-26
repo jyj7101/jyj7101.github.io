@@ -2,7 +2,7 @@
 layout: post
 title: 1. Number Structure
 katex: True
-categories: [그래픽 프로그래밍 2D,assignment]
+categories: [CK,그래픽 프로그래밍 2D,assignment]
 ---
 
 

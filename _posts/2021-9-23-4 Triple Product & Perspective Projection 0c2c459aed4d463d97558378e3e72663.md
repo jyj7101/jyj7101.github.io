@@ -2,7 +2,7 @@
 layout: post
 title: 4.Triple Product & Perspective Projection
 katex: True
-categories: [그래픽 프로그래밍 3D,assignment]
+categories: [CK,그래픽 프로그래밍 3D,assignment]
 ---
 Triple Product & Perspective Projection
 

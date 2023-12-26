@@ -2,7 +2,7 @@
 layout: post
 title: 5. Linearity, Matrix - multiple
 katex: True
-categories: [그래픽 프로그래밍 2D,assignment]
+categories: [CK,그래픽 프로그래밍 2D,assignment]
 ---
 
 Polar Coordinate

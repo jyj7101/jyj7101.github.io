@@ -2,7 +2,7 @@
 layout: post
 title: 9. Complex Number
 katex: True
-categories: [그래픽 프로그래밍 3D,assignment]
+categories: [CK,그래픽 프로그래밍 3D,assignment]
 ---
 Complex Number
 

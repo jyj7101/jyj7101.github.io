@@ -2,7 +2,7 @@
 layout: post
 title: 2. Gimbal-Lock & Cross Product
 katex: True
-categories: [그래픽 프로그래밍 3D,assignment]
+categories: [CK,그래픽 프로그래밍 3D,assignment]
 ---
 
 Gimbal-Lock & Cross Product
