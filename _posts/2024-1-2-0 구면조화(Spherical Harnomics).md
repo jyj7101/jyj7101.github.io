@@ -383,7 +383,7 @@ L1의 기저가 X,Y,Z로 일반적으로 유니티에서 사용하는 기저와 
 
 원래는 다음과 같이 작성되어야 이해하기 편한 함수지만,
 
-```glsl
+```hlsl
 real3 SHEvalLinearL0L1(real3 N, real3 basisA, real3 basisB, real3 basisC, real3 l0)
 {
     real4 vA = real4(N, 1.0);
@@ -400,7 +400,7 @@ real3 SHEvalLinearL0L1(real3 N, real3 basisA, real3 basisB, real3 basisC, real3 
 
 아래와 같이 연산 최적화 된 것입니다.
 
-```glsl
+```hlsl
 real3 SHEvalLinearL0L1(real3 N, real4 shAr, real4 shAg, real4 shAb)
 {
     real4 vA = real4(N, 1.0);
@@ -429,7 +429,7 @@ L1에서 사용한 방식인 각 채널에 대한 곱을 미리 스위즐링하�
 
 그렇게 4개의 연산을 한번에 처리한 다음, 마지막 L22(l=2,m=2)에 대한 식을 계산해 더해줍니다.
 
-```glsl
+```hlsl
 real3 SHEvalLinearL2(real3 N, real4 shBr, real4 shBg, real4 shBb, real4 shC)
 {
     real3 x2;
@@ -453,29 +453,29 @@ real3 SHEvalLinearL2(real3 N, real4 shBr, real4 shBg, real4 shBb, real4 shC)
 
 위에서 확인한 L3다항식을 생각해본다면 못해볼것도 아닙니다.
 
-```glsl
+```hlsl
 real3 SHEvalLinearL3(real3 N, 
-		real4 shDr, real4 shDg, real4 shDb, 
-		real3 shEr, real3 shEg, real3 shEb)
+        real4 shDr, real4 shDg, real4 shDb, 
+        real3 shEr, real3 shEg, real3 shEb)
 {
-	  //-2 ~ 1
-		real4 vD = N.xyxx * N.yyxz * N.xzxz;
-
-		real3 vE = real3( 3 * N.x * N.x - N.y * N.y, //-3
-											N.z * (N.x * N.x - N.y * N.y), //2
-											N.x * (N.x * N.x - 3 * N.y * N.y)) //3
-		
-		
+    //-2 ~ 1
+    real4 vD = N.xyxx * N.yyxz * N.xzxz;
+    
+    real3 vE = real3( 3 * N.x * N.x - N.y * N.y, //-3
+        N.z * (N.x * N.x - N.y * N.y), //2
+        N.x * (N.x * N.x - 3 * N.y * N.y)) //3
+    
+    
     real3 x3;
     x3.r = dot(shDr, vD);
     x3.g = dot(shDg, vD);
     x3.b = dot(shDb, vD);
-
+    
     real3 x4;
     x4.r = dot(shEr, vE);
     x4.g = dot(shEg, vE);
     x4.b = dot(shEb, vE);
-		return x3 + x4;
+    return x3 + x4;
 }
 ```
 
