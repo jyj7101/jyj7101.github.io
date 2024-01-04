@@ -14,9 +14,9 @@ categories: [Graphic,Shader]
 
 ## 구현물
 
-![Untitled](/assets/(Graphic)Grass//Untitled.png)
+![Untitled](/assets/(Graphic)Grass/Untitled.png)
 
-![GIF 2022-05-18 오후 2-05-47.gif](/assets/(Graphic)Grass//GIF_2022-05-18_%EC%98%A4%ED%9B%84_2-05-47.gif)
+![GIF 2022-05-18 오후 2-05-47.gif](/assets/(Graphic)Grass/GIF_2022-05-18_%EC%98%A4%ED%9B%84_2-05-47.gif)
 
 재료는…. 
 
@@ -68,7 +68,7 @@ categories: [Graphic,Shader]
 
 이는 HLSL, 쉐이더 모델5에 존재하는 어트리뷰트입니다.
 
-![Untitled](/assets/(Graphic)Grass//Untitled%201.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%201.png)
 
 패치 유형에 관한 설정을 할 수 있기 때문에,
 
@@ -178,7 +178,7 @@ HullShader에서 받은 제어점의 정보로 보간 작업을 해줘야합니�
 
 이때 무게중심좌표를 사용하는데... 
 
-[/posts/11-Convex,-Line-Clipping,Mesh-ebcc20c2d47f493aa66a637b654d8cdf/](/posts/11-Convex,-Line-Clipping,Mesh-ebcc20c2d47f493aa66a637b654d8cdf/?pvs=21)
+[무게중심 좌표가 가지는 의미와 특징](/posts/11-Convex,-Line-Clipping,Mesh-ebcc20c2d47f493aa66a637b654d8cdf/?pvs=21#%EB%AC%B4%EA%B2%8C%EC%A4%91%EC%8B%AC-%EC%A2%8C%ED%91%9C%EA%B0%80-%EA%B0%80%EC%A7%80%EB%8A%94-%EC%9D%98%EB%AF%B8%EC%99%80-%ED%8A%B9%EC%A7%95)
 
 무게중심좌표는 기존 정리된 내용을 재사용하겠습니다.
 
@@ -348,11 +348,11 @@ GeomData TransformGeomToClip(float3 pos, float3 normal, float3 offset, float3x3 
 
 ### 그림자
 
-![Untitled](/assets/(Graphic)Grass//Untitled%202.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%202.png)
 
 일단 멀티컴파일 처리부터 합시다.
 
-![Untitled](/assets/(Graphic)Grass//Untitled%203.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%203.png)
 
 _MAIN_LIGHT_SHADOWS 가 정의되어있거나, 
 
@@ -360,55 +360,55 @@ _MAIN_LIGHT_SHADOWS_CASCADE가 정의되어있을 때,
 
 저희는 이제 그림자를 받아와서 적용해야합니다.
 
-![Untitled](/assets/(Graphic)Grass//Untitled%204.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%204.png)
 
-![Untitled](/assets/(Graphic)Grass//Untitled%205.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%205.png)
 
 하지만 그림자 색상이 야매입니다.
 
-![Untitled](/assets/(Graphic)Grass//Untitled%206.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%206.png)
 
 이걸 가져올 수 있는 방법이 있을까요?
 
 Input.hlsl을 뜯어보면 다음과 같은 데이터들이 있습니다.
 
-![Untitled](/assets/(Graphic)Grass//Untitled%207.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%207.png)
 
 _SubtractiveShadowColor? 왠지 말이 되는 이름입니다.
 
-![Untitled](/assets/(Graphic)Grass//Untitled%208.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%208.png)
 
 Attenuation의 값은 0에 가까울수록 그림자색상이 나와야하므로, lerp의 앞에 넣어봅니다.
 
-![Untitled](/assets/(Graphic)Grass//Untitled%209.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%209.png)
 
 굳
 
 Environment Lighting이 안먹습니다.
 
-![Untitled](/assets/(Graphic)Grass//Untitled%2010.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%2010.png)
 
-![Untitled](/assets/(Graphic)Grass//Untitled%2011.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%2011.png)
 
 그런데 이렇게넣으면
 
-![GIF 2022-05-18 오후 12-33-24.gif](/assets/(Graphic)Grass//GIF_2022-05-18_%EC%98%A4%ED%9B%84_12-33-24.gif)
+![GIF 2022-05-18 오후 12-33-24.gif](/assets/(Graphic)Grass/GIF_2022-05-18_%EC%98%A4%ED%9B%84_12-33-24.gif)
 
 뭔가 여전히 문제가 있습니다.
 
 잘생각해보면 이것은 그림자와 관련이 없습니다.
 
-![Untitled](/assets/(Graphic)Grass//Untitled%2012.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%2012.png)
 
 단순히 더해줍니다.
 
-![GIF 2022-05-18 오후 12-35-38.gif](/assets/(Graphic)Grass//GIF_2022-05-18_%EC%98%A4%ED%9B%84_12-35-38.gif)
+![GIF 2022-05-18 오후 12-35-38.gif](/assets/(Graphic)Grass/GIF_2022-05-18_%EC%98%A4%ED%9B%84_12-35-38.gif)
 
 _SubtractiveShadowColor 대신 unity_ShadowColor를 사용해줍니다. 
 
 이게 찐퉁인듯 하네요.
 
-![Untitled](/assets/(Graphic)Grass//Untitled%2013.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%2013.png)
 
 ### 빛
 
@@ -478,7 +478,7 @@ float4 frag(GeomData i) : SV_Target
 
 그러면 간단한 라이트가 먹히는 풀이 나옵니다.
 
-![GIF 2024-01-04 오후 3-27-58.gif](/assets/(Graphic)Grass//GIF_2024-01-04_%25EC%2598%25A4%25ED%259B%2584_3-27-58.gif)
+![GIF 2024-01-04 오후 3-27-58.gif](/assets/(Graphic)Grass/GIF_2024-01-04_%EC%98%A4%ED%9B%84_3-27-58.gif)
 
 ## 포그 적용
 
@@ -492,19 +492,19 @@ fogcolor랑 linear interpolation 처리하는 것이죠.
 
 일단 멀티컴파일 처리를 한 후
 
-![Untitled](/assets/(Graphic)Grass//Untitled%2014.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%2014.png)
 
 포그의 값을 넣을 수 있도록
 
 최종 fragment 단으로 넘어가는 데이터에서 fogCoordination을 추가합니다.
 
-![Untitled](/assets/(Graphic)Grass//Untitled%2015.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%2015.png)
 
 ComputeFogFactor의 인자는 clipSpace Position Z. 
 
 그러면 포그설정에 따라 0-1의 값으로 변환해줍니다
 
-![Untitled](/assets/(Graphic)Grass//Untitled%2016.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%2016.png)
 
 ```hlsl
 GeomData TransformGeomToClip(float3 pos, float3 normal, float3 offset, float3x3 transformationMatrix, float2 uv)
@@ -526,11 +526,11 @@ ComputeFogIntensity를 통해 exp 처리한 값으로 처리해주거나 하는�
 
 Linear는 단순히 값을 반환하며, 이를 Lerp하여 뱉습니다.
 
-![Untitled](/assets/(Graphic)Grass//Untitled%2017.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%2017.png)
 
 최종적으로 포그를 처리해서 뱉으면 짜잔
 
-![Untitled](/assets/(Graphic)Grass//Untitled%2018.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%2018.png)
 
 포그가 달렸습니다.
 
@@ -548,7 +548,7 @@ Linear는 단순히 값을 반환하며, 이를 Lerp하여 뱉습니다.
 
 맵에 사용될 렌더텍스처의 uv좌표에 색을 칠합니다.
 
-![Untitled](/assets/(Graphic)Grass//Untitled%2019.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%2019.png)
 
 간단하게 충돌대상의 uv를 가져와서,
 
@@ -560,21 +560,21 @@ uv는 [0~1]의 값을 가지므로,
 
 픽셀은 1단위니까요.
 
-![Untitled](/assets/(Graphic)Grass//Untitled%2020.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%2020.png)
 
 그러면 텍스쳐가 그려지고,
 
-![Untitled](/assets/(Graphic)Grass//Untitled%2021.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%2021.png)
 
 쉐이더에서 처리해줍니다.
 
-![Untitled](/assets/(Graphic)Grass//Untitled%2022.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%2022.png)
 
 짜잔
 
-![GrassShader.gif](/assets/(Graphic)Grass//GrassShader.gif)
+![GrassShader.gif](/assets/(Graphic)Grass/GrassShader.gif)
 
-![GIF 2022-05-23 17-18-57.gif](/assets/(Graphic)Grass//GIF_2022-05-23_17-18-57.gif)
+![GIF 2022-05-23 17-18-57.gif](/assets/(Graphic)Grass/GIF_2022-05-23_17-18-57.gif)
 
 대충 예제는 이렇습니다.
 
@@ -762,7 +762,7 @@ public class GrassTextureInteraction : MonoBehaviour
 
 ## 풀의 형태
 
-![Untitled](/assets/(Graphic)Grass//Untitled%2023.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%2023.png)
 
 풀의 한쪽 형태를 위와 같은 형태의 식으로 만들기위해 아래의 식을 근사함. 
 
@@ -783,7 +783,7 @@ public class GrassTextureInteraction : MonoBehaviour
 
 결과물 - 중간은 통통하고 시작은 얇게 만들 수 있음
 
-![Untitled](/assets/(Graphic)Grass//Untitled%2024.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%2024.png)
 
 ## 플랫폼 문제
 
@@ -793,4 +793,4 @@ public class GrassTextureInteraction : MonoBehaviour
 
 OpenGL ES 3.2도 일단 geometry shader를 지원하는데 말이죠.
 
-![Untitled](/assets/(Graphic)Grass//Untitled%2025.png)
+![Untitled](/assets/(Graphic)Grass/Untitled%2025.png)
