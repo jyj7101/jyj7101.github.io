@@ -11,6 +11,7 @@ group :jekyll_plugins do
     gem 'jekyll-katex'
     gem "jekyll-seo-tag"
     gem 'kramdown-math-katex'
+    gem "jekyll-youtube"
   end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -25,3 +26,6 @@ gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 # Jekyll <= 4.2.0 compatibility with Ruby 3.0
 gem "webrick", "~> 1.7"
+
+# Ruby 3.2  
+# gem "jekyll", github: "jekyll/jekyll", ref: "refs/pull/9248/head"

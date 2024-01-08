@@ -200,6 +200,7 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-katex
+  - jekyll-youtube
 
 whitelist:
   - jekyll-paginate
