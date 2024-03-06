@@ -350,8 +350,7 @@ half4 frag(Varyings IN) : SV_Target
 가져온 SH를 대신해 아무렇게나 작성한 SH값을 적는다면 다음과 같이 나타납니다.
 
 ![아무 값이나 넣어본 결과](/assets/SphericalHarmonics/Untitled%2010.png)
-
-아무 값이나 넣어본 결과
+*아무 값이나 넣어본 결과*
 
 이는 나중에 어떤 값이 어떤 의미를 갖게되는지 확인할 것입니다.
 

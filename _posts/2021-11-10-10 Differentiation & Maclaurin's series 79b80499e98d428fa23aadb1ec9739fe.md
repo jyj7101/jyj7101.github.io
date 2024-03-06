@@ -53,8 +53,8 @@ y=c
 수식적으로 들어간다면 다음과 같이 볼 수 있죠.
 
  $$ 
-f(x)=c\\ \lim_{h\rightarrow0}\frac{f\left(x+h\right)-f\left(x\right)}
-{h}=\\ \lim_{h\rightarrow0}\frac{c-c}{h}=\\ \lim_{h\rightarrow0}\frac{0}{h}=0\ 
+f(x)=c \\ \lim_{h\rightarrow0} \frac{f\left(x+h\right)-f \left(x \right)}
+{h}= \\ \lim_{h\rightarrow0} \frac{c-c}{h}= \\ \lim_{h\rightarrow0} \frac{0}{h}=0 
  $$ 
 
 ## 함수의 극한이 가지는 성질에 대해 정리하시오.
