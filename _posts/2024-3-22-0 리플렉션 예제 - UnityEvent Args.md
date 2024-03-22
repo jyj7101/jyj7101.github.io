@@ -60,7 +60,7 @@ public class DynamicTypeList
         listInstance = value;
     }
 
-		//method call example
+    //method call example
     public void Add(in object value)
     {
         if(value.GetType() != externalType)
@@ -91,7 +91,7 @@ private bool PredictObject(in GameObject target)
     var comps = target.GetComponents<Component>();
     foreach (var component in comps)
     {
-		    var fields = component.GetType().GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+        var fields = component.GetType().GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
 
         foreach (var field in fields)
         {
@@ -115,10 +115,10 @@ private bool PredictObject(in GameObject target)
 //Get UnityEvent's string args
 private void GetUnityEventStringArgs(in UnityEngine.Events.UnityEvent e, out List<string> stringArgs)
 {
-		//depth 1. UnityEngine.CoreModule - UnityEngine.Events
+    //depth 1. UnityEngine.CoreModule - UnityEngine.Events
     Assembly CoreModuleAssembly = Assembly.Load("UnityEngine.CoreModule");
     Type PersistentCallType = CoreModuleAssembly.GetType("UnityEngine.Events.PersistentCall");
-		//depth 2. UnityEventBase's PersistentCallGroup
+    //depth 2. UnityEventBase's PersistentCallGroup
     var f_group = e.GetType().BaseType.GetField("m_PersistentCalls", BindingFlags.NonPublic | BindingFlags.Instance);
     var group = f_group.GetValue(e);
     
@@ -129,7 +129,7 @@ private void GetUnityEventStringArgs(in UnityEngine.Events.UnityEvent e, out Lis
     stringArgs = new List<string>();
     foreach (var call in calls.list)
     {
-		    //depth 4. PersistentCall's ArgumentCache m_Arguments
+        //depth 4. PersistentCall's ArgumentCache m_Arguments
         var f_cache = call.GetType().GetField("m_Arguments", BindingFlags.NonPublic | BindingFlags.Instance);
         var cache = f_cache.GetValue(call);
 
