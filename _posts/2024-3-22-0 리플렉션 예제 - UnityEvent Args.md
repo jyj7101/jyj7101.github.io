@@ -149,7 +149,7 @@ PersistentCalls랑 InvokableCallList랑 다르긴한데
 
 직렬화하여 넣은 ‘인스펙터에서 확인되는 부분’은 PersistentCalls에 들어갑니다.
 
-혹은 `UnityEventTools.AddPersistentListener`  로 추가해도 PersistentCalls에 들어갑니다.
+혹은 UnityEventTools.AddPersistentListener 로 추가해도 PersistentCalls에 들어갑니다.
 
 그리고 리플렉션 느리니까 사용용도와 목적에 맞게 사용합시다.
 
