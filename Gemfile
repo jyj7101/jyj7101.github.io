@@ -11,7 +11,6 @@ group :jekyll_plugins do
     gem 'jekyll-katex'
     gem "jekyll-seo-tag"
     gem 'kramdown-math-katex'
-    gem "jekyll-youtube"
   end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
