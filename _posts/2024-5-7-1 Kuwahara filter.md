@@ -156,7 +156,7 @@ public class KuwaharaRenderFeature : ScriptableRendererFeature
 
 ## 쉐이더 구현
 
-```HLSL
+```hlsl
 Shader "Hidden/KuwaharaShader"
 {
     Properties
