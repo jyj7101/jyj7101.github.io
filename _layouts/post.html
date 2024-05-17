@@ -98,9 +98,17 @@ tail_includes:
 
 </div> <!-- .post-meta -->
 
+{% if page.visible > 0 %}
+
+{% include password_protect.html %}
+
+{% else %}
+
 <div class="post-content">
   {{ content }}
 </div>
+
+{% endif %}
 
 <div class="post-tail-wrapper text-muted">
 

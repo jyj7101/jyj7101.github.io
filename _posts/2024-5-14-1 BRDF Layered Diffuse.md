@@ -1,8 +1,9 @@
 ---
 layout: post
-title: 번역 - BRDF Layered Diffuse
+title: (🔒)번역 - BRDF Layered Diffuse
 katex: True
 categories: [Graphic, Translate]
+visible: 1
 ---
 
 개인공부를 위한 개인페이지입니다. 
