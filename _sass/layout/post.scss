@@ -29,18 +29,24 @@
 
 .post-content > p {
   font-size: small;
-  line-height: 1.0rem;
+  line-height: 1.5rem;
 }
 
 .post-content > ul {
   font-size: small;
-  line-height: 1.0rem;
+  line-height: 1.5rem;
+}
+
+body .post-content > ol > li {
+  font-size: small;
+  line-height: 1.5rem;
 }
 
 .post-content > aside {
   font-size: small;
-  line-height: 1.0rem;
+  line-height: 1.5rem;
 }
+
 
 h1 + .post-meta {
   span + span::before {
