@@ -1,6 +1,6 @@
 ---
 layout: post
-title: nameof와 const string
+title: GJK(Gilbert-Johnson-Keerthi)Algorithm
 katex: True
 categories: [Programming,Algorithm]
 ---
@@ -50,7 +50,9 @@ GJK 알고리즘은 대충 3가지 개념과 3개의 단계로 이루어집니�
 
 **단점**:
 
-- 비볼록 형태에 대한 적용 어려움: 비볼록 형태(concave Hull)에 대해서는 직접적으로 적용하기 어렵습니다.
+- 오목한 형태에 대한 적용 어려움: 오목 형태(concave Hull)에 대해서는 직접적으로 적용하기 어렵습니다.   
+(예를 들면 회전운동의 경우라거나, 메쉬 자체가 오목한 형태를 띄면 좀 힘듭니다)
+
 - 초기 단순체 설정의 중요성: 초기 단순체가 잘못 설정되면 알고리즘이 실패할 수 있습니다.
 
 참고 
