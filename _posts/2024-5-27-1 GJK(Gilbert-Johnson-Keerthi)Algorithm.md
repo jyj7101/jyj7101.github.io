@@ -28,7 +28,7 @@ GJK 알고리즘은 두 개의 볼록한 다면체(Convex Polyhedron) 사이의 
 - 점 A가 (x1, y1)이고 점 B가 (x2, y2)라면, Minkowski Difference는 (x1 - x2, y1 - y2)로 계산됩니다.
 - 더 복잡한 형태의 경우, A의 모든 점들과 B의 모든 점들 간의 모든 가능한 차이 벡터를 계산하여 집합을 만듭니다.
 
-![Untitled](assets/GJK/Untitled.png)
+![Untitled](/assets/GJK/Untitled.png)
 *민코우프스키 차*
 
 # 3. 알고리즘 단계
