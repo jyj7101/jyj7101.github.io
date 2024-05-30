@@ -17,3 +17,5 @@ unity/fn/Build/0100.framework.js.gz filter=lfs diff=lfs merge=lfs -text
 unity/fn/Build/0100.wasm.gz filter=lfs diff=lfs merge=lfs -text
 unity/fn/Build/0100.data filter=lfs diff=lfs merge=lfs -text
 unity/fn/Build/0100.wasm filter=lfs diff=lfs merge=lfs -text
+unity/cubeat/Build/Build.data filter=lfs diff=lfs merge=lfs -text
+unity/cubeat/Build/Build.wasm filter=lfs diff=lfs merge=lfs -text
