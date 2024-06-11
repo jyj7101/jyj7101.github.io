@@ -56,7 +56,8 @@ PBR의 효과적이고 물리적으로 정확한 렌더링을 위해 다음의 �
     - **베크만 분포(Beckmann Distribution)**:초기의 Microfacet 모델 중 하나로, 표면의 미세 기울기를 가우시안 분포로 가정합니다. 스펙큘러 하이라이트가 더 집중된 형태로 나타납니다.
     - **Phong**:초창기에 사용되던 모델들로,하이라이트가 매끄럽고 작은 영역에 집중되는 특성을 가지고 있습니다.
     - **Blinn-Phong**: 퐁모델을 수정한 버전으로, 연산최적화가 진행되었습니다. 스펙큘러 하이라이트가 더 부드럽습니다.
-    - **Cook-Torrance**:미세 기울기의 통계적 분포를 기반으로 하는 모델입니다. 이는 실제 물리적 표면의 반사를 잘 표현하며, 에너지 보존을 충실히 따릅니다.
+    - **Cook-Torrance**:미세 기울기의 통계적 분포를 기반으로 하는 모델입니다. 이는 실제 물리적 표면의 반사를 잘 표현하며, 에너지 보존을 충실히 따릅니다.<br/>
+    이후 GGX 분포가 개발되며 D식이 GGX 분포를 사용하기 시작합니다. 자세한건 양방향 반사도 분포 함수의 아래식 참조.
     - **GGX (Trowbridge-Reitz Distribution)**: 쿡 토랜스 모델의 최적화 버전이며, 표면의 거칠기를 표현하는 미세 표면 분포의 한 종류로, 거친 표면에서 빛의 분산을 잘 표현합니다.
     - **Schlick-GGX**:GGX 분포를 기반으로 한 슈릭-GGX는 반사광의 스무딩을 더 자연스럽게 하기 위한 모델입니다. 프레넬 효과와 결합하여 더욱 사실적인 반사를 구현할 수 있습니다. [Schlick 근사](https://en.wikipedia.org/wiki/Schlick%27s_approximation)
 
@@ -84,16 +85,18 @@ PBR의 효과적이고 물리적으로 정확한 렌더링을 위해 다음의 �
     - **오렌 나이어(Oren-Nayar Model)**:오렌-나이어 모델은 거친 확산 반사를 설명하는 BRDF로, 표면의 거칠기를 고려하여 다양한 각도에서의 반사를 모델링합니다.<br/>
     이는 매트한 표면에서의 반사를 더욱 현실적으로 표현하며, 램버트를 대체하기위해 레퍼런스 그래프를 먼저 그리고 그 그래프를 구현한 것에 가깝습니다. 식이 복잡하단 뜻이죠.
 
-    **Diffuse Reflection + Specular Reflection**
+    **Specular Reflection**
 
+    - **쿡 토랜스 모델(Cook-Torrance Model)**:쿡-토랜스 모델은 미세 표면 분포와 프레넬 반사를 포함하여 표면의 거칠기와 금속성을 고려한 복합적인 BRDF입니다.<br/>
+    금속성과 비금속성 표면을 모두 잘 표현할 수 있습니다.아래 식에 일단 들어갈건 다 들어갔죠? (D = 마이크로페이싯 분포 함수, F = 프레넬, G = 기하학감쇠,미세면감쇠)
+
+    $$ f_r(\omega_i, \omega_r) = \frac{D(h) \cdot F(\omega_i, h) \cdot G(\omega_i, \omega_r, h)}{4 (\omega_i \cdot N) (\omega_r \cdot N)} $$ <br/>
+    
     - **워드 모델 (Ward Model)**:워드 모델은 이방성 반사를 설명하는 BRDF로, 표면의 특정 방향으로 빛이 더 많이 반사되는 경우를 모델링합니다. 이는 브러시드 메탈이나 머리카락 같은 재질을 표현하는 데 적합합니다.<br/>
    
      $$ f_r(\omega_i, \omega_r) = \frac{1}{4 \pi \alpha_x \alpha_y \sqrt{(\omega_i \cdot N)(\omega_r \cdot N)}} \exp \left( - \left( \frac{(\omega_i \cdot H)^2}{\alpha_x^2} + \frac{(\omega_r \cdot H)^2}{\alpha_y^2} \right) \right) $$
 
-    - **쿡 토랜스 모델(Cook-Torrance Model)**:쿡-토랜스 모델은 미세 표면 분포와 프레넬 반사를 포함하여 표면의 거칠기와 금속성을 고려한 복합적인 BRDF입니다.<br/>
-    금속성과 비금속성 표면을 모두 잘 표현할 수 있습니다.<br/>
-    $$ f_r(\omega_i, \omega_r) = \frac{D(h) \cdot F(\omega_i, h) \cdot G(\omega_i, \omega_r, h)}{4 (\omega_i \cdot N) (\omega_r \cdot N)} $$ <br/>
-    일단 들어갈건 다 들어갔죠?
+    **Diffuse Reflection + Specular Reflection**
 
     - **디즈니 BRDF(Heitz 모델)**: 디즈니 BRDF는 다양한 표면 특성을 단일 모델로 통합하여, 사용자가 조정할 수 있는 여러 매개변수를 제공합니다.<br/> 이는 다양한 재질을 하나의 모델로 표현할 수 있도록 합니다. 디퓨즈는 오렌-나이어모델을, 스펙큘러는 쿡-토랜스 모델을 사용합니다.
 
