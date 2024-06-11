@@ -5,6 +5,10 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- no Cacheing settings -->
+  <meta http-equiv="Cache-Control" content="max-age=86400">
+  <meta http-equiv="Pragma" content="cache">
+  <meta http-equiv="Expires" content="{{ site.time | date: '%a, %d %b %Y %H:%M:%S %Z' | plus: 86400 }}">
 
   <!-- Allow having a localized datetime different from the appearance language -->
   {% if site.prefer_datetime_locale %}
