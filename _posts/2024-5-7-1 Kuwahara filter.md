@@ -25,6 +25,9 @@ categories: [Graphic, Shader, Unity]
 
 물속에 잠수한다던지, 조금 다른 시각적 감각을 보여주고 싶을 때, 사용하면 괜찮을 것 같습니다.
 
+![sample_Kuwahara_2.gif](/assets/kuwahara/sample_Kuwahara_2.gif)
+*교내 졸업작품 LUKA : IN THE AZURE FIELD에 임시로 작업해본 샘플입니다*
+
 ![GIF1.gif](/assets/kuwahara/GIF1.gif)
 
 파라메터를 조정하며 저번에 사용한 삼각분할반사버전 오브젝트도 넣어봤습니다.
